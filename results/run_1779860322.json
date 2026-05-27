@@ -1,0 +1,192 @@
+{
+  "report": {
+    "query": "multi-agent LLM frameworks",
+    "papers_analyzed": 5,
+    "per_paper_summaries": [
+      {
+        "paper_id": "metagpt_2023",
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+        "year": 2023,
+        "one_sentence_summary": "MetaGPT enhances coordination and output quality in multi-agent systems through structured role specialization and communication channels inspired by software engineering."
+      },
+      {
+        "paper_id": "autogen_2023",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "year": 2023,
+        "one_sentence_summary": "AutoGen establishes multi-agent conversation as a scalable paradigm for LLM applications, surpassing single-agent baselines on various benchmarks."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents",
+        "year": 2023,
+        "one_sentence_summary": "This survey provides a comprehensive framework for LLM-based autonomous agents and identifies key challenges in the field."
+      },
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "year": 2023,
+        "one_sentence_summary": "AgentBench offers an evaluation benchmark for LLMs focusing on reasoning, tool use, and task completion across multiple agents."
+      },
+      {
+        "paper_id": "camel_2023",
+        "title": "CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society",
+        "year": 2023,
+        "one_sentence_summary": "CAMEL demonstrates structured multi-agent dialogue using role-playing and inception prompting, enabling autonomous task completion."
+      }
+    ],
+    "overlaps": [
+      {
+        "paper_ids": [
+          "metagpt_2023",
+          "autogen_2023",
+          "camel_2023"
+        ],
+        "shared_element": "method family",
+        "description": "All three papers propose frameworks where multiple agents with defined roles collaborate through structured interactions to solve tasks."
+      },
+      {
+        "paper_ids": [
+          "metagpt_2023",
+          "autogen_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers address limitations in existing systems for complex reasoning and task execution, proposing multi-agent frameworks as a solution."
+      },
+      {
+        "paper_ids": [
+          "agentsurvey_2023",
+          "agentbench_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers identify the lack of standardized frameworks or evaluations for LLM-based agents, focusing on the need for unified approaches or benchmarks."
+      }
+    ],
+    "differences": [
+      {
+        "paper_id": "metagpt_2023",
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework (2023)",
+        "differentiating_aspect": "Method",
+        "description": "MetaGPT uniquely incorporates software engineering workflow conventions into multi-agent interactions, assigning specialized roles to GPT agents to enhance coordination and output quality."
+      },
+      {
+        "paper_id": "autogen_2023",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation (2023)",
+        "differentiating_aspect": "Novelty",
+        "description": "AutoGen introduces the concept of multi-agent conversation as a practical and scalable paradigm for LLM applications, emphasizing structured communication among agents with defined roles."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents (2023)",
+        "differentiating_aspect": "Contribution",
+        "description": "This survey provides a unified framework for understanding LLM-based autonomous agents and identifies key open challenges, which were previously unaddressed in the literature."
+      },
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents (2023)",
+        "differentiating_aspect": "Method",
+        "description": "AgentBench offers a comprehensive benchmark for evaluating LLMs as agents, focusing on integrated agent behavior across realistic tasks requiring planning, tool use, and multi-step execution."
+      },
+      {
+        "paper_id": "camel_2023",
+        "title": "CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society (2023)",
+        "differentiating_aspect": "Novelty",
+        "description": "CAMEL introduces inception prompting, a novel method for guiding LLM agents to maintain role coherence and complete tasks collaboratively without human intervention."
+      }
+    ],
+    "gaps": [
+      {
+        "problem_formulation": "Existing multi-agent frameworks lack structured coordination protocols.",
+        "missing_method": "Benchmarking",
+        "description": "While the problem of lacking structured coordination protocols in multi-agent frameworks is identified, there is no benchmarking method applied to evaluate the effectiveness of proposed solutions in this area.",
+        "supporting_evidence": "AgentBench focuses on benchmarking LLMs as agents but does not address structured coordination protocols in multi-agent frameworks."
+      },
+      {
+        "problem_formulation": "Single-agent systems face fundamental limitations in complex reasoning and multi-step task execution.",
+        "missing_method": "Survey",
+        "description": "The problem of limitations in single-agent systems is identified, but there is no survey method applied to comprehensively review existing solutions or frameworks addressing this issue.",
+        "supporting_evidence": "The survey by agentsurvey_2023 focuses on LLM-based autonomous agents but does not specifically address the limitations of single-agent systems."
+      },
+      {
+        "problem_formulation": "The lack of a unified conceptual framework for LLM-based autonomous agents and the identification of open challenges.",
+        "missing_method": "Role specialization and communication protocols",
+        "description": "The problem of lacking a unified framework is identified, but there is no method using role specialization and communication protocols to address this issue.",
+        "supporting_evidence": "MetaGPT and AutoGen use role specialization and communication protocols but do not focus on creating a unified conceptual framework."
+      },
+      {
+        "problem_formulation": "The rapid development of LLM-based agents lacks standardized evaluation.",
+        "missing_method": "Role-playing framework with inception prompting",
+        "description": "The problem of lacking standardized evaluation is identified, but there is no method using a role-playing framework with inception prompting to address this issue.",
+        "supporting_evidence": "CAMEL uses a role-playing framework with inception prompting for dialogue but does not apply it to standardized evaluation."
+      },
+      {
+        "problem_formulation": "Enabling structured, coherent multi-agent dialogue in large language models without human oversight.",
+        "missing_method": "Benchmarking",
+        "description": "The problem of enabling structured, coherent multi-agent dialogue is identified, but there is no benchmarking method applied to evaluate the effectiveness of proposed solutions in this area.",
+        "supporting_evidence": "AgentBench provides benchmarking for LLMs as agents but does not focus on structured, coherent multi-agent dialogue without human oversight."
+      }
+    ],
+    "synthesis": "The collection of papers collectively highlights the evolving landscape of multi-agent frameworks in large language model (LLM) applications. MetaGPT, AutoGen, and CAMEL each introduce unique methodologies where multiple agents collaborate through structured interactions, improving task coordination and execution. While MetaGPT and AutoGen focus on enhancing multi-agent system performance through role specialization and conversation paradigms, CAMEL emphasizes autonomous dialogue for task completion. Meanwhile, the survey by agentsurvey_2023 and the benchmark developed by agentbench_2023 underscore the need for standardized frameworks and evaluations, addressing gaps in current methodologies. Despite these advances, the corpus reveals a lack of benchmarking and comprehensive surveys evaluating structured coordination protocols and role specialization in these multi-agent systems.",
+    "citations": [
+      "[metagpt_2023] Sirui Hong, Mingchen Zhuge et al. (2023). MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework.",
+      "[autogen_2023] Qingyun Wu, Gagan Bansal et al. (2023). AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.",
+      "[agentsurvey_2023] Lei Wang, Chen Ma et al. (2023). A Survey on Large Language Model based Autonomous Agents.",
+      "[agentbench_2023] Xiao Liu, Hao Yu et al. (2023). AgentBench: Evaluating LLMs as Agents.",
+      "[camel_2023] Guohao Li, Hasan Abed Al Kader Hammoud et al. (2023). CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society."
+    ]
+  },
+  "metadata": {
+    "query": "multi-agent LLM frameworks",
+    "elapsed_seconds": 43.66,
+    "stages": {
+      "query_analysis": {
+        "original_query": "multi-agent LLM frameworks",
+        "intents": [
+          {
+            "intent": "Explore frameworks for multi-agent LLM systems",
+            "domain": "multi-agent LLMs",
+            "comparison_axis": "frameworks"
+          },
+          {
+            "intent": "Identify architectural designs in multi-agent LLM frameworks",
+            "domain": "multi-agent LLMs",
+            "comparison_axis": "architectures"
+          }
+        ],
+        "reformulated_queries": [
+          "multi-agent LLM system frameworks",
+          "architectural designs in multi-agent LLM frameworks",
+          "frameworks for multi-agent language models",
+          "multi-agent LLM architectures"
+        ]
+      },
+      "retrieval": {
+        "n_candidates": 8,
+        "react_steps": 1
+      },
+      "ranking": {
+        "selected": [
+          "metagpt_2023",
+          "autogen_2023",
+          "agentsurvey_2023",
+          "agentbench_2023",
+          "camel_2023"
+        ]
+      },
+      "extraction": {
+        "compliance": {
+          "total": 5,
+          "compliant": 4,
+          "compliance_rate": 0.8,
+          "non_compliant_ids": [
+            "agentsurvey_2023"
+          ]
+        }
+      },
+      "comparison": {
+        "n_overlaps": 3,
+        "n_differences": 5,
+        "n_gaps": 5
+      }
+    }
+  }
+}

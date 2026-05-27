@@ -1,0 +1,117 @@
+{
+  "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+  "per_paper_summaries": [
+    {
+      "paper_id": "metagpt_2023",
+      "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+      "year": 2023,
+      "one_sentence_summary": "MetaGPT introduces structured coordination mechanisms into multi-agent frameworks to produce complete software projects from natural language requirements, outperforming previous approaches on key benchmarks."
+    },
+    {
+      "paper_id": "autogen_2023",
+      "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+      "year": 2023,
+      "one_sentence_summary": "AutoGen leverages multi-agent conversation as a scalable paradigm for LLM applications, achieving superior performance compared to single-agent baselines across diverse benchmarks."
+    },
+    {
+      "paper_id": "camel_2023",
+      "title": "CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society",
+      "year": 2023,
+      "one_sentence_summary": "CAMEL introduces inception prompting to ensure role coherence in multi-agent dialogues, demonstrating structured communication in various domains without human intervention."
+    },
+    {
+      "paper_id": "agentbench_2023",
+      "title": "AgentBench: Evaluating LLMs as Agents",
+      "year": 2023,
+      "one_sentence_summary": "AgentBench provides a comprehensive evaluation framework for LLMs as autonomous agents, highlighting performance challenges in long-horizon tasks and tool use."
+    },
+    {
+      "paper_id": "reflexion_2023",
+      "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+      "year": 2023,
+      "one_sentence_summary": "Reflexion uses verbal reinforcement learning to achieve state-of-the-art benchmark performance without modifying model weights, offering an interpretable and sample-efficient approach."
+    }
+  ],
+  "comparison_rubric": {
+    "overlaps": [
+      {
+        "paper_ids": [
+          "metagpt_2023",
+          "autogen_2023",
+          "camel_2023"
+        ],
+        "shared_element": "method family",
+        "description": "All three papers propose multi-agent frameworks where agents have defined roles and communicate through structured protocols to enhance task execution and coordination."
+      },
+      {
+        "paper_ids": [
+          "metagpt_2023",
+          "reflexion_2023"
+        ],
+        "shared_element": "dataset",
+        "description": "Both papers report performance improvements on the HumanEval benchmark, indicating a shared evaluation dataset."
+      }
+    ],
+    "differences": [
+      {
+        "paper_id": "metagpt_2023",
+        "title": "MetaGPT: Meta Programming for A Multi-Agent Collaborative Framework",
+        "differentiating_aspect": "method",
+        "description": "MetaGPT introduces structured coordination mechanisms inspired by human software organizations into multi-agent frameworks, assigning specialized roles to GPT agents and using structured communication protocols."
+      },
+      {
+        "paper_id": "autogen_2023",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "differentiating_aspect": "novelty",
+        "description": "AutoGen's key innovation is the use of multi-agent conversation as a practical and scalable paradigm for LLM applications, which is distinct from single-agent systems."
+      },
+      {
+        "paper_id": "camel_2023",
+        "title": "CAMEL: Communicative Agents for Mind Exploration of Large Language Model Society",
+        "differentiating_aspect": "novelty",
+        "description": "CAMEL introduces inception prompting to maintain role coherence in multi-agent dialogues without human intervention, enabling structured and coherent communication."
+      },
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "differentiating_aspect": "scope",
+        "description": "AgentBench provides a comprehensive benchmark for evaluating LLMs as autonomous agents across diverse environments, focusing on integrated agent behavior rather than isolated capabilities."
+      },
+      {
+        "paper_id": "reflexion_2023",
+        "title": "Reflexion: Language Agents with Verbal Reinforcement Learning",
+        "differentiating_aspect": "method",
+        "description": "Reflexion uses verbal reinforcement learning, allowing language agents to learn from natural language self-reflections and verbal feedback without model fine-tuning, which is interpretable and sample-efficient."
+      }
+    ],
+    "gaps": [
+      {
+        "problem_formulation": "Existing multi-agent frameworks lack structured coordination mechanisms, leading to inconsistent outputs.",
+        "missing_method": "Verbal reinforcement learning",
+        "description": "While the problem of lacking structured coordination in multi-agent frameworks is addressed using structured communication protocols in MetaGPT, the method of verbal reinforcement learning, as used in Reflexion, is not applied to this problem. This could provide an alternative approach to improving coordination by allowing agents to learn from verbal feedback.",
+        "supporting_evidence": "MetaGPT addresses the problem with structured communication protocols, but Reflexion's verbal reinforcement learning is not mentioned in this context."
+      },
+      {
+        "problem_formulation": "Single-agent systems face fundamental limitations in complex reasoning and multi-step task execution.",
+        "missing_method": "Role-playing framework with inception prompting",
+        "description": "The problem of single-agent limitations is tackled using multi-agent conversation in AutoGen, but the role-playing framework with inception prompting, as used in CAMEL, is not applied. This method could potentially enhance the coherence and effectiveness of multi-agent systems tackling complex tasks.",
+        "supporting_evidence": "AutoGen uses structured conversation among agents, but CAMEL's role-playing framework is not utilized for this problem."
+      },
+      {
+        "problem_formulation": "The rapid development of LLM-based agents lacks standardized evaluation, and existing benchmarks focus on isolated capabilities rather than integrated agent behavior.",
+        "missing_method": "Multi-agent conversation framework",
+        "description": "AgentBench addresses the evaluation problem with a comprehensive benchmark, but does not employ a multi-agent conversation framework as seen in AutoGen. Incorporating multi-agent conversation could provide insights into integrated agent behavior during evaluation.",
+        "supporting_evidence": "AgentBench provides a benchmark for evaluation but does not use a multi-agent conversation framework like AutoGen."
+      },
+      {
+        "problem_formulation": "Reinforcement learning for language agents traditionally requires expensive gradient updates.",
+        "missing_method": "Structured coordination mechanisms",
+        "description": "Reflexion addresses the problem of expensive gradient updates with verbal reinforcement learning, but does not incorporate structured coordination mechanisms as seen in MetaGPT. This could offer a structured approach to reinforcement learning without gradient updates.",
+        "supporting_evidence": "Reflexion uses verbal reinforcement learning, but MetaGPT's structured coordination mechanisms are not applied to this problem."
+      }
+    ]
+  },
+  "instructions": {
+    "scale": "1=Poor  2=Fair  3=Good  4=Very Good  5=Excellent"
+  }
+}

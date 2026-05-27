@@ -1,0 +1,21 @@
+{
+  "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+  "papers_retrieved": [
+    "autogen_2023",
+    "agentsurvey_2023",
+    "agentbench_2023",
+    "openagents_2023",
+    "react_2022"
+  ],
+  "n_papers": 5,
+  "output": "The selected papers explore the development and evaluation of multi-agent frameworks and methodologies for collaborative reasoning in large language model (LLM) applications. \"AutoGen\" introduces a multi-agent conversation paradigm, showcasing superior performance over single-agent systems in reasoning tasks and proposing future improvements in dynamic agent creation and conflict resolution. \"A Survey on Large Language Model based Autonomous Agents\" reviews the field, highlighting challenges like unreliable long-horizon planning, coordination failures, and a lack of safety research. \"AgentBench\" offers a benchmark suite for LLM agents, assessing them across various environments and tasks, emphasizing the importance of multi-step reasoning and long-horizon task completion. \"OpenAgents\" presents a platform for deploying LLM-based agents in real-world settings, providing transparency through action and reasoning logs. Lastly, \"ReAct\" focuses on integrating reasoning and acting loops, showing improved performance and reduced hallucination due to feedback from real environments, a methodology that has influenced many modern LLM architectures.\n\nSimilarities across these papers include a focus on improving LLM agent performance through multi-agent approaches and the importance of real-world applicability and evaluation. Differences arise in their contributions: \"AutoGen\" and \"ReAct\" emphasize practical improvements in reasoning and task completion processes, while \"AgentBench\" and \"OpenAgents\" focus on evaluation and deployment environments. \"A Survey on Large Language Model based Autonomous Agents\" provides an overview of the challenges and areas for improvement within the field.\n\nA notable gap is the need for standardized benchmarks and metrics for evaluating collaborative reasoning across different frameworks, as noted in the survey paper. Additionally, while safety and reliability are mentioned as challenges, there is limited exploration into practical safety mechanisms in the frameworks discussed. Future work could address these gaps by developing comprehensive safety protocols and establishing unified evaluation criteria for multi-agent systems.",
+  "elapsed_seconds": 3.69,
+  "metadata": {
+    "model": "gpt-4o",
+    "temperature": 0.7,
+    "method": "direct_summarization",
+    "structured_extraction": false,
+    "comparison_agent": false,
+    "schema_constraints": false
+  }
+}

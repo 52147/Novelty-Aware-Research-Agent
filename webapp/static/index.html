@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Novelty-Aware Research Agent</title>
+<style>
+  :root {
+    --navy:   #0D1B2A;
+    --blue:   #1B4F72;
+    --teal:   #1A7FA1;
+    --sky:    #AED9E0;
+    --white:  #FFFFFF;
+    --offW:   #F4F8FB;
+    --muted:  #6B8CAE;
+    --red:    #C0392B;
+    --green:  #1E8449;
+    --gold:   #D4AC0D;
+    --card:   #FFFFFF;
+    --border: #D6E4F0;
+    --text:   #0D1B2A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--offW);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    background: var(--navy);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  }
+  header .logo {
+    width: 38px; height: 38px;
+    background: var(--teal);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+  }
+  header h1 {
+    color: var(--white);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+  header p {
+    color: var(--sky);
+    font-size: 13px;
+    margin-top: 2px;
+  }
+  header .badge {
+    margin-left: auto;
+    background: var(--blue);
+    color: var(--sky);
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  /* ── Layout ── */
+  .layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 0;
+    height: calc(100vh - 68px);
+  }
+
+  /* ── Sidebar ── */
+  .sidebar {
+    background: var(--white);
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .sidebar-section {
+    padding: 20px;
+    border-bottom: 1px solid var(--border);
+  }
+  .sidebar-section h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+
+  /* Query input */
+  .query-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 80px;
+    color: var(--text);
+    transition: border-color .2s;
+  }
+  .query-input:focus {
+    outline: none;
+    border-color: var(--teal);
+  }
+
+  .run-btn {
+    margin-top: 10px;
+    width: 100%;
+    padding: 11px;
+    background: var(--teal);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background .2s, transform .1s;
+  }
+  .run-btn:hover:not(:disabled) { background: var(--blue); }
+  .run-btn:active:not(:disabled) { transform: scale(0.98); }
+  .run-btn:disabled { background: var(--muted); cursor: not-allowed; }
+
+  /* Corpus stats */
+  .stats-row {
+    display: flex;
+    gap: 8px;
+  }
+  .stat-box {
+    flex: 1;
+    background: var(--offW);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+  }
+  .stat-box .val {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--teal);
+    line-height: 1;
+  }
+  .stat-box .lbl {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  /* Past runs */
+  .runs-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 8px 16px 16px;
+  }
+  .run-item {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    margin-bottom: 8px;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+    background: var(--offW);
+  }
+  .run-item:hover { border-color: var(--teal); background: #EBF5FB; }
+  .run-item.active { border-color: var(--teal); background: #EBF5FB; }
+  .run-item .run-query {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .run-item .run-meta {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 3px;
+  }
+
+  /* ── Main panel ── */
+  .main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* ── Pipeline progress ── */
+  .progress-panel {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 24px;
+    display: none;
+  }
+  .progress-panel.visible { display: block; }
+
+  .stage-row {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+  .stage-dot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    position: relative;
+  }
+  .stage-dot::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    width: 100%;
+    height: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+  .stage-dot:last-child::after { display: none; }
+  .stage-dot .dot {
+    width: 24px; height: 24px;
+    border-radius: 50%;
+    background: var(--border);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--muted);
+    z-index: 1;
+    transition: background .3s, color .3s;
+    position: relative;
+  }
+  .stage-dot.running .dot {
+    background: var(--gold);
+    color: var(--navy);
+    animation: pulse 1s infinite;
+  }
+  .stage-dot.done .dot {
+    background: var(--teal);
+    color: var(--white);
+  }
+  .stage-dot.done::after { background: var(--teal); }
+  .stage-dot .stage-name {
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 4px;
+    text-align: center;
+    max-width: 70px;
+  }
+  .stage-dot.running .stage-name,
+  .stage-dot.done .stage-name { color: var(--text); }
+
+  @keyframes pulse {
+    0%,100% { box-shadow: 0 0 0 0 rgba(212,172,13,.4); }
+    50%      { box-shadow: 0 0 0 6px rgba(212,172,13,0); }
+  }
+
+  .progress-detail {
+    font-size: 13px;
+    color: var(--muted);
+    min-height: 18px;
+  }
+  .progress-detail span { color: var(--teal); font-weight: 600; }
+
+  /* ── Results area ── */
+  .results-area {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+  }
+
+  /* Empty state */
+  .empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--muted);
+    gap: 12px;
+    text-align: center;
+  }
+  .empty-state .icon { font-size: 48px; }
+  .empty-state h2 { font-size: 20px; color: var(--text); }
+  .empty-state p { font-size: 14px; max-width: 360px; line-height: 1.6; }
+
+  /* Result content */
+  #result-content { display: none; }
+  #result-content.visible { display: block; }
+
+  .result-header {
+    margin-bottom: 20px;
+  }
+  .result-header h2 {
+    font-size: 18px;
+    color: var(--navy);
+    margin-bottom: 6px;
+  }
+  .result-meta {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .meta-chip {
+    background: var(--offW);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .meta-chip b { color: var(--text); }
+
+  /* Section cards */
+  .section-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 16px;
+    overflow: hidden;
+  }
+  .section-header {
+    padding: 14px 20px;
+    background: var(--navy);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-header .count {
+    background: var(--teal);
+    border-radius: 20px;
+    padding: 2px 10px;
+    font-size: 12px;
+    margin-left: auto;
+  }
+  .section-body { padding: 16px 20px; }
+
+  /* Paper summaries */
+  .paper-card {
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--offW);
+    margin-bottom: 10px;
+  }
+  .paper-card:last-child { margin-bottom: 0; }
+  .paper-id {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    color: var(--teal);
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .paper-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+  }
+  .paper-summary { font-size: 13px; color: #555; line-height: 1.5; }
+
+  /* Overlaps */
+  .overlap-item {
+    padding: 12px 16px;
+    border-left: 3px solid var(--teal);
+    background: #EBF5FB;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 10px;
+  }
+  .overlap-item:last-child { margin-bottom: 0; }
+  .overlap-tag {
+    display: inline-block;
+    background: var(--teal);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .overlap-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+  .overlap-papers { font-size: 12px; color: var(--muted); margin-top: 4px; }
+
+  /* Differences */
+  .diff-item {
+    padding: 12px 16px;
+    border-left: 3px solid var(--blue);
+    background: #EAF4FB;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 10px;
+  }
+  .diff-item:last-child { margin-bottom: 0; }
+  .diff-aspect {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 4px;
+  }
+  .diff-paper { font-weight: 700; font-size: 13px; color: var(--text); }
+  .diff-desc { font-size: 13px; color: #444; line-height: 1.5; }
+
+  /* Gaps */
+  .gap-item {
+    padding: 12px 16px;
+    border-left: 3px solid var(--red);
+    background: #FFF0F0;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 10px;
+  }
+  .gap-item:last-child { margin-bottom: 0; }
+  .gap-problem { font-size: 12px; font-weight: 700; color: var(--red); margin-bottom: 4px; }
+  .gap-method {
+    display: inline-block;
+    background: var(--red);
+    color: var(--white);
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .gap-desc { font-size: 13px; color: #444; line-height: 1.5; }
+  .gap-evidence { font-size: 12px; color: var(--muted); margin-top: 4px; font-style: italic; }
+
+  /* Synthesis */
+  .synthesis-text {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  /* Citations */
+  .citation-item {
+    font-size: 13px;
+    color: #555;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    line-height: 1.5;
+  }
+  .citation-item:last-child { border-bottom: none; }
+
+  /* Error */
+  .error-msg {
+    background: #FFF0F0;
+    border: 1px solid var(--red);
+    border-radius: 8px;
+    padding: 16px;
+    color: var(--red);
+    font-size: 14px;
+  }
+
+  /* ── Onboarding Modal ── */
+  .modal-overlay {
+    display: none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,.55);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--white);
+    border-radius: 16px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(0,0,0,.35);
+    animation: modalIn .25s ease;
+  }
+  @keyframes modalIn {
+    from { opacity:0; transform:translateY(24px) scale(.97); }
+    to   { opacity:1; transform:translateY(0)    scale(1);   }
+  }
+  .modal-header {
+    background: var(--navy);
+    padding: 24px 28px 20px;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+  }
+  .modal-header h2 { color: var(--white); font-size: 20px; margin-bottom: 4px; }
+  .modal-header p  { color: var(--sky);   font-size: 13px; }
+  .modal-close {
+    position: absolute; top: 16px; right: 20px;
+    background: rgba(255,255,255,.15); border: none;
+    color: white; width: 30px; height: 30px;
+    border-radius: 50%; font-size: 16px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s;
+  }
+  .modal-close:hover { background: rgba(255,255,255,.28); }
+  .modal-body { padding: 24px 28px; }
+
+  .step {
+    display: flex; gap: 16px; margin-bottom: 22px;
+  }
+  .step-num {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: var(--teal); color: white;
+    font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 2px;
+  }
+  .step h4 { font-size: 15px; color: var(--navy); margin-bottom: 4px; }
+  .step p  { font-size: 13px; color: #555; line-height: 1.6; }
+
+  .pipeline-mini {
+    display: flex; gap: 0; margin: 18px 0;
+    border-radius: 10px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .pmini {
+    flex: 1; padding: 10px 6px; text-align: center;
+    background: var(--offW); border-right: 1px solid var(--border);
+    font-size: 10px; line-height: 1.4;
+  }
+  .pmini:last-child { border-right: none; }
+  .pmini.red { background: #FFF0F0; }
+  .pmini .pnum { font-weight: 800; color: var(--teal); font-size: 13px; }
+  .pmini.red .pnum { color: var(--red); }
+  .pmini .pname { color: var(--text); font-weight: 600; margin: 2px 0; }
+  .pmini .ptemp { color: var(--muted); font-size: 9px; }
+
+  .tip-box {
+    background: #FFFBEA; border: 1px solid #F0DC82;
+    border-radius: 8px; padding: 12px 16px;
+    font-size: 13px; color: #7D6608;
+    margin-top: 8px; line-height: 1.6;
+  }
+
+  .modal-footer {
+    padding: 16px 28px 24px;
+    display: flex; gap: 10px; justify-content: flex-end;
+  }
+  .btn-secondary {
+    padding: 9px 20px; border-radius: 8px;
+    border: 1.5px solid var(--border); background: white;
+    color: var(--text); font-size: 14px; cursor: pointer;
+    transition: border-color .2s;
+  }
+  .btn-secondary:hover { border-color: var(--teal); }
+  .btn-primary {
+    padding: 9px 24px; border-radius: 8px;
+    border: none; background: var(--teal);
+    color: white; font-size: 14px; font-weight: 600; cursor: pointer;
+    transition: background .2s;
+  }
+  .btn-primary:hover { background: var(--blue); }
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">🔬</div>
+  <div>
+    <h1>Novelty-Aware Research Agent</h1>
+    <p>CSC 792 · Shou-Tzu Han · University of South Dakota</p>
+  </div>
+  <div class="badge" id="corpus-badge">Loading corpus…</div>
+  <button onclick="openModal()" title="How to use this"
+    style="margin-left:12px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);
+           color:white;width:34px;height:34px;border-radius:50%;font-size:16px;cursor:pointer;
+           display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s;"
+    onmouseover="this.style.background='rgba(255,255,255,0.22)'"
+    onmouseout="this.style.background='rgba(255,255,255,0.12)'">?</button>
+</header>
+
+<div class="layout">
+
+  <!-- ── Sidebar ── -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <h3>OpenAI API Key</h3>
+      <div style="position:relative;">
+        <input type="password" id="api-key-input"
+          placeholder="sk-..."
+          style="width:100%;padding:9px 36px 9px 12px;border:1.5px solid var(--border);
+                 border-radius:8px;font-size:13px;font-family:inherit;color:var(--text);
+                 background:var(--offW);transition:border-color .2s;"
+          oninput="saveApiKey(this.value)"
+          onfocus="this.style.borderColor='var(--teal)'"
+          onblur="this.style.borderColor='var(--border)'"/>
+        <span id="key-icon"
+          style="position:absolute;right:10px;top:50%;transform:translateY(-50%);
+                 font-size:14px;cursor:pointer;user-select:none;"
+          onclick="toggleKeyVisibility()" title="Show/hide">👁</span>
+      </div>
+      <div id="key-status" style="font-size:11px;color:var(--muted);margin-top:4px;">
+        Stored in browser session only.
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Query</h3>
+      <textarea class="query-input" id="query-input"
+        placeholder="e.g. Compare multi-agent LLM frameworks for collaborative reasoning"></textarea>
+      <button class="run-btn" id="run-btn" onclick="runQuery()">
+        <span id="btn-icon">▶</span>
+        <span id="btn-text">Run Agent</span>
+      </button>
+    </div>
+
+    <div class="sidebar-section">
+      <h3>Corpus</h3>
+      <div class="stats-row" id="corpus-stats">
+        <div class="stat-box"><div class="val" id="stat-papers">—</div><div class="lbl">Papers</div></div>
+        <div class="stat-box"><div class="val" id="stat-chunks">—</div><div class="lbl">Chunks</div></div>
+      </div>
+    </div>
+
+    <div class="sidebar-section" style="border-bottom:none; padding-bottom:8px;">
+      <h3>Past Runs</h3>
+    </div>
+    <div class="runs-list" id="runs-list">
+      <div style="font-size:13px;color:var(--muted);padding:8px 0;">No runs yet.</div>
+    </div>
+
+  </aside>
+
+  <!-- ── Main ── -->
+  <main class="main">
+
+    <!-- Progress -->
+    <div class="progress-panel" id="progress-panel">
+      <div class="stage-row" id="stage-row">
+        <div class="stage-dot" id="stage-1"><div class="dot">1</div><div class="stage-name">Query Analyzer</div></div>
+        <div class="stage-dot" id="stage-2"><div class="dot">2</div><div class="stage-name">Retriever</div></div>
+        <div class="stage-dot" id="stage-3"><div class="dot">3</div><div class="stage-name">Ranker</div></div>
+        <div class="stage-dot" id="stage-4"><div class="dot">4</div><div class="stage-name">Extractor</div></div>
+        <div class="stage-dot" id="stage-5"><div class="dot">5</div><div class="stage-name">Comparison</div></div>
+        <div class="stage-dot" id="stage-6"><div class="dot">6</div><div class="stage-name">Generator</div></div>
+      </div>
+      <div class="progress-detail" id="progress-detail">Initializing…</div>
+    </div>
+
+    <!-- Results -->
+    <div class="results-area" id="results-area">
+
+      <!-- Empty state -->
+      <div class="empty-state" id="empty-state">
+        <div class="icon">🔍</div>
+        <h2>Enter a query to get started</h2>
+        <p>The agent will retrieve relevant papers from the corpus, extract
+           structured contribution records, and compare them across overlaps,
+           differences, and methodological gaps.</p>
+      </div>
+
+      <!-- Result content -->
+      <div id="result-content">
+
+        <div class="result-header">
+          <h2 id="result-query"></h2>
+          <div class="result-meta" id="result-meta"></div>
+        </div>
+
+        <!-- Per-paper summaries -->
+        <div class="section-card">
+          <div class="section-header">
+            📄 Per-Paper Summaries
+            <span class="count" id="count-papers">0</span>
+          </div>
+          <div class="section-body" id="section-summaries"></div>
+        </div>
+
+        <!-- Overlaps -->
+        <div class="section-card">
+          <div class="section-header">
+            🔗 Overlaps
+            <span class="count" id="count-overlaps">0</span>
+          </div>
+          <div class="section-body" id="section-overlaps"></div>
+        </div>
+
+        <!-- Differences -->
+        <div class="section-card">
+          <div class="section-header">
+            ↔️ Differentiating Aspects
+            <span class="count" id="count-diffs">0</span>
+          </div>
+          <div class="section-body" id="section-diffs"></div>
+        </div>
+
+        <!-- Gaps -->
+        <div class="section-card">
+          <div class="section-header" style="background:#7B241C;">
+            🚨 Potential Gaps (corpus-level only)
+            <span class="count" id="count-gaps">0</span>
+          </div>
+          <div class="section-body" id="section-gaps"></div>
+        </div>
+
+        <!-- Synthesis -->
+        <div class="section-card">
+          <div class="section-header">💡 Synthesis</div>
+          <div class="section-body" id="section-synthesis"></div>
+        </div>
+
+        <!-- Citations -->
+        <div class="section-card">
+          <div class="section-header">📚 Citations</div>
+          <div class="section-body" id="section-citations"></div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<script>
+// ── State ─────────────────────────────────────────────────────────────────────
+let isRunning = false;
+
+// ── On load ───────────────────────────────────────────────────────────────────
+window.addEventListener('load', () => {
+  loadCorpusStats();
+  loadPastRuns();
+});
+
+// ── Corpus stats ──────────────────────────────────────────────────────────────
+async function loadCorpusStats() {
+  try {
+    const r = await fetch('/api/corpus/stats');
+    const d = await r.json();
+    document.getElementById('stat-papers').textContent = d.n_papers;
+    document.getElementById('stat-chunks').textContent = d.n_chunks;
+    document.getElementById('corpus-badge').textContent =
+      d.index_exists ? `${d.n_papers} papers · ${d.n_chunks} chunks` : 'Corpus not built';
+  } catch(e) {
+    document.getElementById('corpus-badge').textContent = 'API offline';
+  }
+}
+
+// ── Past runs ─────────────────────────────────────────────────────────────────
+async function loadPastRuns() {
+  try {
+    const r = await fetch('/api/results');
+    const d = await r.json();
+    const list = document.getElementById('runs-list');
+    if (!d.results.length) return;
+    list.innerHTML = '';
+    d.results.forEach(run => {
+      const div = document.createElement('div');
+      div.className = 'run-item';
+      div.innerHTML = `
+        <div class="run-query">${run.query}</div>
+        <div class="run-meta">${run.elapsed_seconds}s · ${run.filename}</div>`;
+      div.onclick = () => loadResult(run.filename, div);
+      list.appendChild(div);
+    });
+  } catch(e) {}
+}
+
+async function loadResult(filename, el) {
+  document.querySelectorAll('.run-item').forEach(i => i.classList.remove('active'));
+  if (el) el.classList.add('active');
+  try {
+    const r = await fetch(`/api/results/${filename}`);
+    const d = await r.json();
+    renderReport(d.report, d.metadata);
+  } catch(e) {}
+}
+
+// ── Run query ─────────────────────────────────────────────────────────────────
+async function runQuery() {
+  const query = document.getElementById('query-input').value.trim();
+  if (!query || isRunning) return;
+
+  isRunning = true;
+  setRunning(true);
+  resetStages();
+  showProgress(true);
+  hideResults();
+
+  try {
+    const response = await fetch('/api/query/stream', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ query, top_n: 5, api_key: document.getElementById("api-key-input").value.trim() }),
+    });
+
+    const reader  = response.body.getReader();
+    const decoder = new TextDecoder();
+    let   buffer  = '';
+
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+
+      buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split('\n\n');
+      buffer = lines.pop();
+
+      for (const line of lines) {
+        if (!line.startsWith('data: ')) continue;
+        try {
+          const evt = JSON.parse(line.slice(6));
+          handleEvent(evt);
+        } catch(e) {}
+      }
+    }
+  } catch(e) {
+    setDetail(`<span style="color:var(--red)">Error: ${e.message}</span>`);
+  } finally {
+    isRunning = false;
+    setRunning(false);
+    loadPastRuns();
+  }
+}
+
+function handleEvent(evt) {
+  switch(evt.type) {
+    case 'init':
+      setDetail(evt.message);
+      break;
+
+    case 'stage':
+      setDetail(`<span>${evt.name}</span> — ${evt.detail}`);
+      if (evt.status === 'running') setStage(evt.stage, 'running');
+      if (evt.status === 'done')    setStage(evt.stage, 'done');
+      break;
+
+    case 'complete':
+      setDetail(`✅ Done in <span>${evt.elapsed}s</span>`);
+      renderReport(evt.report, evt.metadata);
+      setTimeout(() => showProgress(false), 2000);
+      break;
+
+    case 'error':
+      setDetail(`<span style="color:var(--red)">❌ ${evt.message}</span>`);
+      break;
+  }
+}
+
+// ── Render report ─────────────────────────────────────────────────────────────
+function renderReport(report, meta) {
+  document.getElementById('empty-state').style.display = 'none';
+  const rc = document.getElementById('result-content');
+  rc.classList.add('visible');
+
+  document.getElementById('result-query').textContent = `"${report.query}"`;
+
+  // Meta chips
+  const metaEl = document.getElementById('result-meta');
+  const elapsed = meta?.elapsed_seconds || 0;
+  const comp    = meta?.stages?.extraction?.compliance || {};
+  metaEl.innerHTML = `
+    <div class="meta-chip"><b>${report.papers_analyzed}</b> papers</div>
+    <div class="meta-chip"><b>${elapsed}s</b> runtime</div>
+    <div class="meta-chip">Compliance <b>${comp.compliance_rate ? Math.round(comp.compliance_rate*100)+'%' : '—'}</b></div>
+    <div class="meta-chip">Overlaps <b>${(report.overlaps||[]).length}</b></div>
+    <div class="meta-chip">Gaps <b>${(report.gaps||[]).length}</b></div>`;
+
+  // Summaries
+  const sumEl = document.getElementById('section-summaries');
+  document.getElementById('count-papers').textContent = (report.per_paper_summaries||[]).length;
+  sumEl.innerHTML = (report.per_paper_summaries||[]).map(p => `
+    <div class="paper-card">
+      <div class="paper-id">${p.paper_id} · ${p.year||''}</div>
+      <div class="paper-title">${p.title}</div>
+      <div class="paper-summary">${p.one_sentence_summary}</div>
+    </div>`).join('');
+
+  // Overlaps
+  const ovEl = document.getElementById('section-overlaps');
+  document.getElementById('count-overlaps').textContent = (report.overlaps||[]).length;
+  ovEl.innerHTML = (report.overlaps||[]).length
+    ? (report.overlaps||[]).map(o => `
+      <div class="overlap-item">
+        <span class="overlap-tag">${o.shared_element}</span>
+        <div class="overlap-desc">${o.description}</div>
+        <div class="overlap-papers">📄 ${(o.paper_ids||[]).join(' · ')}</div>
+      </div>`).join('')
+    : '<div style="color:var(--muted);font-size:13px;">None identified.</div>';
+
+  // Differences
+  const dfEl = document.getElementById('section-diffs');
+  document.getElementById('count-diffs').textContent = (report.differences||[]).length;
+  dfEl.innerHTML = (report.differences||[]).map(d => `
+    <div class="diff-item">
+      <div class="diff-aspect">${d.differentiating_aspect}</div>
+      <div class="diff-paper">${d.title||d.paper_id}</div>
+      <div class="diff-desc">${d.description}</div>
+    </div>`).join('');
+
+  // Gaps
+  const gpEl = document.getElementById('section-gaps');
+  document.getElementById('count-gaps').textContent = (report.gaps||[]).length;
+  gpEl.innerHTML = (report.gaps||[]).length
+    ? (report.gaps||[]).map(g => `
+      <div class="gap-item">
+        <div class="gap-problem">Problem: ${g.problem_formulation}</div>
+        <span class="gap-method">Missing: ${g.missing_method}</span>
+        <div class="gap-desc">${g.description}</div>
+        <div class="gap-evidence">Evidence: ${g.supporting_evidence}</div>
+      </div>`).join('')
+    : '<div style="color:var(--muted);font-size:13px;">None identified.</div>';
+
+  // Synthesis
+  document.getElementById('section-synthesis').innerHTML =
+    `<div class="synthesis-text">${report.synthesis}</div>`;
+
+  // Citations
+  document.getElementById('section-citations').innerHTML =
+    (report.citations||[]).map(c =>
+      `<div class="citation-item">${c}</div>`).join('');
+
+  // Scroll to top
+  document.getElementById('results-area').scrollTop = 0;
+}
+
+// ── UI helpers ────────────────────────────────────────────────────────────────
+function setRunning(val) {
+  const btn  = document.getElementById('run-btn');
+  btn.disabled = val;
+  document.getElementById('btn-icon').textContent = val ? '⏳' : '▶';
+  document.getElementById('btn-text').textContent  = val ? 'Running…' : 'Run Agent';
+}
+
+function showProgress(val) {
+  document.getElementById('progress-panel').classList.toggle('visible', val);
+}
+
+function hideResults() {
+  document.getElementById('empty-state').style.display = 'flex';
+  document.getElementById('result-content').classList.remove('visible');
+}
+
+function resetStages() {
+  for (let i = 1; i <= 6; i++) {
+    const el = document.getElementById(`stage-${i}`);
+    el.classList.remove('running', 'done');
+  }
+  setDetail('Initializing…');
+}
+
+function setStage(n, state) {
+  const el = document.getElementById(`stage-${n}`);
+  if (!el) return;
+  el.classList.remove('running', 'done');
+  el.classList.add(state);
+}
+
+function setDetail(html) {
+  document.getElementById('progress-detail').innerHTML = html;
+}
+
+
+// ── Modal ─────────────────────────────────────────────────────────────────────
+function openModal()  { document.getElementById('modal-overlay').classList.add('open'); }
+function closeModal() { document.getElementById('modal-overlay').classList.remove('open'); }
+function handleOverlayClick(e) { if (e.target === e.currentTarget) closeModal(); }
+
+// Show on first visit unless user dismissed
+window.addEventListener('load', () => {
+  if (!localStorage.getItem('hideModal')) openModal();
+});
+
+// ── API key helpers ──────────────────────────────────────────────────────────
+function saveApiKey(val) {
+  sessionStorage.setItem("openai_key", val);
+  const st = document.getElementById("key-status");
+  if (val.startsWith("sk-") && val.length > 20) {
+    st.textContent = "✅ Key looks valid.";
+    st.style.color = "var(--green)";
+  } else if (val.length > 0) {
+    st.textContent = "⚠️ Key should start with sk-";
+    st.style.color = "var(--gold)";
+  } else {
+    st.textContent = "Stored in browser session only.";
+    st.style.color = "var(--muted)";
+  }
+}
+
+function toggleKeyVisibility() {
+  const inp = document.getElementById("api-key-input");
+  inp.type = inp.type === "password" ? "text" : "password";
+}
+
+// Restore key from session on load
+window.addEventListener("load", () => {
+  const saved = sessionStorage.getItem("openai_key");
+  if (saved) {
+    document.getElementById("api-key-input").value = saved;
+    saveApiKey(saved);
+  }
+});
+
+// Enter key in textarea
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('query-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) runQuery();
+  });
+});
+</script>
+
+<!-- ── Onboarding Modal ── -->
+<div class="modal-overlay" id="modal-overlay" onclick="handleOverlayClick(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <h2>🔬 Novelty-Aware Research Agent</h2>
+      <p>A prototype agentic AI system for comparing research contributions across papers</p>
+    </div>
+
+    <div class="modal-body">
+
+      <div class="step">
+        <div class="step-num">💡</div>
+        <div>
+          <h4>What does this system do?</h4>
+          <p>Instead of summarizing papers independently, this system retrieves a set of relevant papers,
+             extracts their structured contributions, and <strong>compares them</strong> —
+             surfacing overlaps, unique contributions, and methodological gaps that existing tools miss.</p>
+        </div>
+      </div>
+
+      <div class="pipeline-mini">
+        <div class="pmini"><div class="pnum">1</div><div class="pname">Query Analyzer</div><div class="ptemp">T=0.3</div></div>
+        <div class="pmini"><div class="pnum">2</div><div class="pname">Retriever (ReAct)</div><div class="ptemp">T=0.3</div></div>
+        <div class="pmini"><div class="pnum">3</div><div class="pname">Ranker</div><div class="ptemp">T=0.1</div></div>
+        <div class="pmini red"><div class="pnum">4</div><div class="pname">Extractor</div><div class="ptemp">T=0.1</div></div>
+        <div class="pmini red"><div class="pnum">5</div><div class="pname">Comparison Agent</div><div class="ptemp">T=0.2</div></div>
+        <div class="pmini"><div class="pnum">6</div><div class="pname">Generator</div><div class="ptemp">T=0.7</div></div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div>
+          <h4>Enter your OpenAI API key</h4>
+          <p>Paste your <code style="background:#F0F0F0;padding:1px 5px;border-radius:3px;font-size:12px;">sk-...</code> key
+             in the sidebar. It is stored only in your browser session and never sent to any server other than OpenAI directly.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">2</div>
+        <div>
+          <h4>Type a comparison query</h4>
+          <p>Ask a comparative question about the research domain. Good examples:<br>
+          <em style="color:var(--teal);">"Compare multi-agent LLM frameworks for collaborative reasoning"</em><br>
+          <em style="color:var(--teal);">"What evaluation methods exist for LLM reasoning agents?"</em></p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">3</div>
+        <div>
+          <h4>Watch the 6-stage pipeline run</h4>
+          <p>The progress bar shows each component completing in real time. The full pipeline takes
+             <strong>~35 seconds</strong> — the structured approach takes longer than a simple summary,
+             but produces typed, auditable comparison records.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">4</div>
+        <div>
+          <h4>Explore the structured results</h4>
+          <p>Results include: per-paper contribution summaries, explicit paper-level overlaps,
+             differentiating aspects per paper, a <strong>problem × method gap matrix</strong> showing
+             absent combinations, and a synthesis paragraph with citations.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        ⚠️ <strong>Corpus note:</strong> The current corpus contains 20 papers in the agentic AI domain.
+        Results are corpus-level observations only — gap findings reflect what is absent from this retrieved
+        set, not the broader literature.
+      </div>
+
+    </div>
+
+    <div class="modal-footer">
+      <button class="btn-secondary" onclick="closeModal(); localStorage.setItem('hideModal','1')">
+        Don't show again
+      </button>
+      <button class="btn-primary" onclick="closeModal()">
+        Get started →
+      </button>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
