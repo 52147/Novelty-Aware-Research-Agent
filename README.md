@@ -14,6 +14,13 @@ pinned: false
 
 Unlike standard RAG systems that summarize papers independently, this system performs structured multi-step reasoning over retrieved papers to surface **contribution-level differences**, **overlaps**, and **corpus-level methodological gaps**.
 
+
+---
+
+
+## 🎬 Demo GIF
+
+![Novelty-Aware Research Agent demo](assets/demo.gif)
 ---
 
 ## 🚀 How to Use
