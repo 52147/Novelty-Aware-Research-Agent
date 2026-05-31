@@ -1,0 +1,34 @@
+{
+  "per_query": [
+    {
+      "run": "run_01.json",
+      "query": "Compare multi-agent LLM frameworks for col",
+      "precision_at_5": 0.0,
+      "ndcg_at_5": null,
+      "recall_at_5": null,
+      "mrr": 0.0
+    },
+    {
+      "run": "run_02.json",
+      "query": "What evaluation methods exist for LLM reas",
+      "precision_at_5": 0.0,
+      "ndcg_at_5": null,
+      "recall_at_5": null,
+      "mrr": 0.0
+    },
+    {
+      "run": "run_03.json",
+      "query": "Compare verbal reinforcement and role-play",
+      "precision_at_5": 0.0,
+      "ndcg_at_5": null,
+      "recall_at_5": null,
+      "mrr": 0.0
+    }
+  ],
+  "mean": {
+    "precision_at_5": 0.0,
+    "ndcg_at_5": null,
+    "recall_at_5": null,
+    "mrr": 0.0
+  }
+}

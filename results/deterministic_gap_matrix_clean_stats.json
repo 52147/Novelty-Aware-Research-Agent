@@ -1,0 +1,14 @@
+{
+  "run_files": [
+    "results/run_01.json",
+    "results/run_02.json",
+    "results/run_03.json"
+  ],
+  "unique_papers": 12,
+  "problem_categories": 8,
+  "method_categories": 12,
+  "total_cells": 96,
+  "filled_cells": 12,
+  "empty_cells_corpus_level_gaps": 84,
+  "matrix_density": 0.125
+}

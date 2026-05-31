@@ -1,0 +1,41 @@
+{
+  "reformulation_counts": [
+    1,
+    2,
+    4
+  ],
+  "per_query": [
+    {
+      "run": "run_01.json",
+      "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+      "recall_at_5_by_n": {
+        "1": 0.5,
+        "2": 0.5,
+        "4": 0.5
+      }
+    },
+    {
+      "run": "run_02.json",
+      "query": "What evaluation methods exist for LLM reasoning agents?",
+      "recall_at_5_by_n": {
+        "1": 0.45454545454545453,
+        "2": 0.45454545454545453,
+        "4": 0.45454545454545453
+      }
+    },
+    {
+      "run": "run_03.json",
+      "query": "Compare verbal reinforcement and role-playing approaches in LLM agents",
+      "recall_at_5_by_n": {
+        "1": 0.5,
+        "2": 0.5,
+        "4": 0.5
+      }
+    }
+  ],
+  "mean_recall_by_n": {
+    "1": 0.48484848484848486,
+    "2": 0.48484848484848486,
+    "4": 0.48484848484848486
+  }
+}

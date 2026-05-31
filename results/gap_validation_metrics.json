@@ -1,0 +1,13 @@
+{
+  "n_sampled": 20,
+  "n_labeled": 20,
+  "n_unlabeled": 0,
+  "label_counts": {
+    "indirect": 4,
+    "plausible": 13,
+    "too_broad": 3
+  },
+  "positive_label": "plausible",
+  "gap_precision": 0.65,
+  "interpretation": "Fraction of sampled empty cells judged plausible as corpus-level gap candidates. This is not a claim about the broader literature."
+}

@@ -1,0 +1,7 @@
+Capability,Basic RAG,Full system
+Structured contribution records,0,1
+Paper-level overlap IDs,0,1
+Per-paper differentiation,0,1
+Problem × method gap matrix,0,1
+Auditable multi-stage trace,0,1
+Total supported structured features,0,5

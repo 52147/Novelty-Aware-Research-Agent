@@ -1,0 +1,103 @@
+{
+  "retriever_comparison": [
+    {
+      "system": "BM25",
+      "P@5": 0.6666666666666666,
+      "P@10": 0.6,
+      "nDCG@5": 0.6670608948326179,
+      "nDCG@10": 0.670534576264897,
+      "Recall@5": 0.3242424242424243,
+      "Recall@10": 0.5848484848484848
+    },
+    {
+      "system": "Dense",
+      "P@5": 0.6666666666666666,
+      "P@10": 0.3333333333333333,
+      "nDCG@5": 0.5707873528828142,
+      "nDCG@10": 0.4807276679868251,
+      "Recall@5": 0.3242424242424242,
+      "Recall@10": 0.3242424242424242
+    },
+    {
+      "system": "Hybrid",
+      "P@5": 0.6666666666666666,
+      "P@10": 0.6333333333333333,
+      "nDCG@5": 0.6621220168082194,
+      "nDCG@10": 0.6633706277099308,
+      "Recall@5": 0.3242424242424242,
+      "Recall@10": 0.6151515151515151
+    },
+    {
+      "system": "Full ranker",
+      "P@5": 1.0,
+      "P@10": 0.5,
+      "nDCG@5": 0.7851128935688955,
+      "nDCG@10": 0.6611750618069044,
+      "Recall@5": 0.48484848484848486,
+      "Recall@10": 0.48484848484848486
+    }
+  ],
+  "gap_validation": {
+    "sampled_empty_cells": 20,
+    "labeled_cells": 20,
+    "plausible_cells": 13,
+    "gap_precision": 0.65,
+    "label_counts": {
+      "indirect": 4,
+      "plausible": 13,
+      "too_broad": 3
+    }
+  },
+  "top10_retrieval_metrics": {
+    "source_file": "results/ir_metrics.json",
+    "per_query": [
+      {
+        "query": "R1",
+        "P@5": 1.0,
+        "P@10": null,
+        "nDCG@5": 0.8692416898160298,
+        "nDCG@10": null,
+        "Recall@5": 0.5,
+        "Recall@10": null,
+        "MRR": 1.0
+      },
+      {
+        "query": "R2",
+        "P@5": 1.0,
+        "P@10": null,
+        "nDCG@5": 0.536438637256595,
+        "nDCG@10": null,
+        "Recall@5": 0.45454545454545453,
+        "Recall@10": null,
+        "MRR": 1.0
+      },
+      {
+        "query": "R3",
+        "P@5": 1.0,
+        "P@10": null,
+        "nDCG@5": 0.9496583536340616,
+        "nDCG@10": null,
+        "Recall@5": 0.5,
+        "Recall@10": null,
+        "MRR": 1.0
+      }
+    ],
+    "mean": {
+      "P@5": 1.0,
+      "P@10": null,
+      "nDCG@5": 0.7851128935688955,
+      "nDCG@10": null,
+      "Recall@5": 0.48484848484848486,
+      "Recall@10": null,
+      "MRR": 1.0
+    }
+  },
+  "gap_error_analysis": {
+    "total": 20,
+    "plausible": 13,
+    "too_broad": 3,
+    "indirect": 4,
+    "meaningless": 0,
+    "paragraph": "The sampled gap validation shows that 13 of 20 sampled empty cells were judged plausible, giving a gap precision of 0.650. The main failure modes were not meaningless gaps, but cells that were too broad or only indirectly supported by the retrieved corpus. This suggests that the deterministic matrix is useful as a corpus-level absence signal, but individual empty cells should be interpreted cautiously rather than as definitive claims about the broader literature."
+  }
+}

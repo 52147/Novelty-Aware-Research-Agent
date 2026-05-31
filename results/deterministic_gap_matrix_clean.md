@@ -1,0 +1,10 @@
+| Problem / Method | Benchmarking | Conversational multi-agent framework | Decoupled reasoning from observation | Memory + reflection + planning | Multi-agent collaboration framework | ReAct reasoning-action loop | Reasoning prompting | Role-based multi-agent framework | Role-playing / inception prompting | Simulation-based multi-agent coordination | Survey and taxonomy | Verbal reflection |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| Agent evaluation | agentbench_2023 | — | — | — | — | — | — | — | — | — | — | — |
+| Agent reasoning | — | — | — | — | — | — | cot_2022 | — | — | — | — | — |
+| Agent self-improvement | — | — | — | — | — | — | — | — | — | — | — | reflexion_2023 |
+| Agent survey / taxonomy | — | — | — | — | — | — | — | — | — | — | agentsurvey_2023 | — |
+| Human behavior simulation | — | — | — | generativeagents_2023 | — | — | — | — | — | — | — | — |
+| Multi-agent coordination | — | autogen_2023 | — | — | agentverse_2023 | — | — | metagpt_2023 | camel_2023 | metaagents_2023 | — | — |
+| Reasoning-action efficiency | — | — | rewoo_2023 | — | — | — | — | — | — | — | — | — |
+| Reasoning-action interaction | — | — | — | — | — | react_2022 | — | — | — | — | — | — |

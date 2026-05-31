@@ -1,0 +1,9 @@
+{
+  "overall": {
+    "n_judgments": 31,
+    "exact_agreement": 0.0,
+    "binary_agreement": 0.0,
+    "cohens_kappa_binary": 0.0,
+    "interpretation": "fair/poor"
+  }
+}

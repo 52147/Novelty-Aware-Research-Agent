@@ -1,0 +1,51 @@
+{
+  "_instructions": "RATER 2: assign a relevance grade to each paper per query WITHOUT looking at rater 1's grades. 3=highly relevant, 2=relevant, 1=marginal, 0=not relevant.",
+  "queries": {
+    "run_01.json": {
+      "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+      "relevance": {
+        "metagpt_2023": 0,
+        "agentverse_2023": 0,
+        "autogen_2023": 0,
+        "agentsurvey_2023": 0,
+        "agentbench_2023": 0,
+        "camel_2023": 0,
+        "chatdev_2023": 0,
+        "metaagents_2023": 0,
+        "multidebate_2023": 0,
+        "openagents_2023": 0
+      }
+    },
+    "run_02.json": {
+      "query": "What evaluation methods exist for LLM reasoning agents?",
+      "relevance": {
+        "agentbench_2023": 0,
+        "agentsurvey_2023": 0,
+        "cot_2022": 0,
+        "react_2022": 0,
+        "rewoo_2023": 0,
+        "gaia_2023": 0,
+        "webarena_2023": 0,
+        "swebench_2023": 0,
+        "mint_2023": 0,
+        "toolbench_2023": 0,
+        "openagents_2023": 0
+      }
+    },
+    "run_03.json": {
+      "query": "Compare verbal reinforcement and role-playing approaches in LLM agents",
+      "relevance": {
+        "reflexion_2023": 0,
+        "camel_2023": 0,
+        "metaagents_2023": 0,
+        "agentverse_2023": 0,
+        "generativeagents_2023": 0,
+        "selfrefine_2023": 0,
+        "expel_2023": 0,
+        "multidebate_2023": 0,
+        "autogen_2023": 0,
+        "metagpt_2023": 0
+      }
+    }
+  }
+}

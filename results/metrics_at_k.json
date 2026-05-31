@@ -1,0 +1,92 @@
+{
+  "cutoffs": [
+    5,
+    10
+  ],
+  "per_query": [
+    {
+      "run": "run_01.json",
+      "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+      "metrics": {
+        "P@5": 1.0,
+        "nDCG@5": 0.9908183105074706,
+        "Recall@5": 0.5,
+        "P@10": 0.8,
+        "nDCG@10": 0.9070915989407292,
+        "Recall@10": 0.8,
+        "MRR": 1.0
+      },
+      "top10": [
+        "agentverse_2023",
+        "autogen_2023",
+        "metagpt_2023",
+        "agentsurvey_2023",
+        "camel_2023",
+        "agentbench_2023",
+        "multidebate_2023",
+        "openagents_2023",
+        "generativeagents_2023",
+        "react_2022"
+      ]
+    },
+    {
+      "run": "run_02.json",
+      "query": "What evaluation methods exist for LLM reasoning agents?",
+      "metrics": {
+        "P@5": 1.0,
+        "nDCG@5": 0.532191988019348,
+        "Recall@5": 0.45454545454545453,
+        "P@10": 0.6,
+        "nDCG@10": 0.46606738645583734,
+        "Recall@10": 0.5454545454545454,
+        "MRR": 1.0
+      },
+      "top10": [
+        "agentbench_2023",
+        "agentsurvey_2023",
+        "cot_2022",
+        "rewoo_2023",
+        "react_2022",
+        "chameleon_2023",
+        "autogen_2023",
+        "openagents_2023",
+        "swiftsage_2023",
+        "generativeagents_2023"
+      ]
+    },
+    {
+      "run": "run_03.json",
+      "query": "Compare verbal reinforcement and role-playing approaches in LLM agents",
+      "metrics": {
+        "P@5": 1.0,
+        "nDCG@5": 0.9496583536340616,
+        "Recall@5": 0.5,
+        "P@10": 0.5,
+        "nDCG@10": 0.7956806329843885,
+        "Recall@10": 0.5,
+        "MRR": 1.0
+      },
+      "top10": [
+        "reflexion_2023",
+        "camel_2023",
+        "metaagents_2023",
+        "agentverse_2023",
+        "generativeagents_2023",
+        "agentsurvey_2023",
+        "react_2022",
+        "agentbench_2023",
+        "fireact_2023",
+        "chatdev_2023"
+      ]
+    }
+  ],
+  "mean": {
+    "P@5": 1.0,
+    "P@10": 0.6333333333333333,
+    "nDCG@5": 0.8242228840536266,
+    "nDCG@10": 0.7229465394603184,
+    "Recall@5": 0.48484848484848486,
+    "Recall@10": 0.6151515151515151,
+    "MRR": 1.0
+  }
+}

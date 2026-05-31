@@ -1,0 +1,306 @@
+{
+  "per_query": [
+    {
+      "run": "run_01.json",
+      "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+      "systems": {
+        "BM25": {
+          "order": [
+            "metagpt_2023",
+            "agentverse_2023",
+            "roco_2023",
+            "autogen_2023",
+            "cot_2022",
+            "agentsurvey_2023",
+            "webarena_2023",
+            "agentbench_2023",
+            "camel_2023",
+            "metaagents_2023"
+          ],
+          "metrics": {
+            "P@5": 0.6,
+            "nDCG@5": 0.7558869364740775,
+            "Recall@5": 0.3,
+            "P@10": 0.7,
+            "nDCG@10": 0.8278541913403822,
+            "Recall@10": 0.7,
+            "MRR": 1.0
+          }
+        },
+        "Dense": {
+          "order": [
+            "autogen_2023",
+            "agentsurvey_2023",
+            "agentbench_2023",
+            "agentverse_2023",
+            "openagents_2023"
+          ],
+          "metrics": {
+            "P@5": 1.0,
+            "nDCG@5": 0.6701503383607372,
+            "Recall@5": 0.5,
+            "P@10": 0.5,
+            "nDCG@10": 0.5637056293392649,
+            "Recall@10": 0.5,
+            "MRR": 1.0
+          }
+        },
+        "Hybrid": {
+          "order": [
+            "autogen_2023",
+            "agentsurvey_2023",
+            "agentverse_2023",
+            "metagpt_2023",
+            "agentbench_2023",
+            "roco_2023",
+            "cot_2022",
+            "webarena_2023",
+            "camel_2023",
+            "openagents_2023"
+          ],
+          "metrics": {
+            "P@5": 1.0,
+            "nDCG@5": 0.8272858410866246,
+            "Recall@5": 0.5,
+            "P@10": 0.7,
+            "nDCG@10": 0.8014593119347834,
+            "Recall@10": 0.7,
+            "MRR": 1.0
+          }
+        },
+        "Full ranker": {
+          "order": [
+            "metagpt_2023",
+            "agentverse_2023",
+            "autogen_2023",
+            "agentsurvey_2023",
+            "agentbench_2023"
+          ],
+          "metrics": {
+            "P@5": 1.0,
+            "nDCG@5": 0.8692416898160298,
+            "Recall@5": 0.5,
+            "P@10": 0.5,
+            "nDCG@10": 0.7311738960010932,
+            "Recall@10": 0.5,
+            "MRR": 1.0
+          }
+        }
+      }
+    },
+    {
+      "run": "run_02.json",
+      "query": "What evaluation methods exist for LLM reasoning agents?",
+      "systems": {
+        "BM25": {
+          "order": [
+            "fireact_2023",
+            "agentbench_2023",
+            "agentsurvey_2023",
+            "agentverse_2023",
+            "react_2022",
+            "autogen_2023",
+            "memgpt_2023",
+            "openagents_2023",
+            "webarena_2023",
+            "metaagents_2023"
+          ],
+          "metrics": {
+            "P@5": 0.6,
+            "nDCG@5": 0.3428941990841632,
+            "Recall@5": 0.2727272727272727,
+            "P@10": 0.5,
+            "nDCG@10": 0.39183361894178437,
+            "Recall@10": 0.45454545454545453,
+            "MRR": 0.5
+          }
+        },
+        "Dense": {
+          "order": [
+            "agentbench_2023",
+            "cot_2022",
+            "autogen_2023",
+            "rewoo_2023",
+            "generativeagents_2023"
+          ],
+          "metrics": {
+            "P@5": 0.6,
+            "nDCG@5": 0.3905965787846496,
+            "Recall@5": 0.2727272727272727,
+            "P@10": 0.3,
+            "nDCG@10": 0.33251519120092726,
+            "Recall@10": 0.2727272727272727,
+            "MRR": 1.0
+          }
+        },
+        "Hybrid": {
+          "order": [
+            "agentbench_2023",
+            "autogen_2023",
+            "fireact_2023",
+            "cot_2022",
+            "agentsurvey_2023",
+            "agentverse_2023",
+            "react_2022",
+            "rewoo_2023",
+            "memgpt_2023",
+            "openagents_2023"
+          ],
+          "metrics": {
+            "P@5": 0.6,
+            "nDCG@5": 0.41625785989929204,
+            "Recall@5": 0.2727272727272727,
+            "P@10": 0.6,
+            "nDCG@10": 0.4205423226969745,
+            "Recall@10": 0.5454545454545454,
+            "MRR": 1.0
+          }
+        },
+        "Full ranker": {
+          "order": [
+            "agentbench_2023",
+            "agentsurvey_2023",
+            "cot_2022",
+            "react_2022",
+            "rewoo_2023"
+          ],
+          "metrics": {
+            "P@5": 1.0,
+            "nDCG@5": 0.536438637256595,
+            "Recall@5": 0.45454545454545453,
+            "P@10": 0.5,
+            "nDCG@10": 0.4566706564352315,
+            "Recall@10": 0.45454545454545453,
+            "MRR": 1.0
+          }
+        }
+      }
+    },
+    {
+      "run": "run_03.json",
+      "query": "Compare verbal reinforcement and role-playing approaches in LLM agents",
+      "systems": {
+        "BM25": {
+          "order": [
+            "reflexion_2023",
+            "camel_2023",
+            "chatdev_2023",
+            "expel_2023",
+            "metaagents_2023",
+            "autogen_2023",
+            "agentsurvey_2023",
+            "react_2022",
+            "metagpt_2023",
+            "rewoo_2023"
+          ],
+          "metrics": {
+            "P@5": 0.8,
+            "nDCG@5": 0.9024015489396129,
+            "Recall@5": 0.4,
+            "P@10": 0.6,
+            "nDCG@10": 0.7919159185125241,
+            "Recall@10": 0.6,
+            "MRR": 1.0
+          }
+        },
+        "Dense": {
+          "order": [
+            "camel_2023",
+            "agentbench_2023",
+            "agentsurvey_2023",
+            "reflexion_2023",
+            "chatdev_2023"
+          ],
+          "metrics": {
+            "P@5": 0.4,
+            "nDCG@5": 0.651615141503056,
+            "Recall@5": 0.2,
+            "P@10": 0.2,
+            "nDCG@10": 0.545962183420283,
+            "Recall@10": 0.2,
+            "MRR": 1.0
+          }
+        },
+        "Hybrid": {
+          "order": [
+            "camel_2023",
+            "reflexion_2023",
+            "chatdev_2023",
+            "agentsurvey_2023",
+            "agentbench_2023",
+            "expel_2023",
+            "metaagents_2023",
+            "autogen_2023",
+            "react_2022",
+            "metagpt_2023"
+          ],
+          "metrics": {
+            "P@5": 0.4,
+            "nDCG@5": 0.7428223494387413,
+            "Recall@5": 0.2,
+            "P@10": 0.6,
+            "nDCG@10": 0.7681102484980347,
+            "Recall@10": 0.6,
+            "MRR": 1.0
+          }
+        },
+        "Full ranker": {
+          "order": [
+            "reflexion_2023",
+            "camel_2023",
+            "metaagents_2023",
+            "agentverse_2023",
+            "generativeagents_2023"
+          ],
+          "metrics": {
+            "P@5": 1.0,
+            "nDCG@5": 0.9496583536340616,
+            "Recall@5": 0.5,
+            "P@10": 0.5,
+            "nDCG@10": 0.7956806329843885,
+            "Recall@10": 0.5,
+            "MRR": 1.0
+          }
+        }
+      }
+    }
+  ],
+  "mean": {
+    "BM25": {
+      "P@5": 0.6666666666666666,
+      "nDCG@5": 0.6670608948326179,
+      "Recall@5": 0.3242424242424243,
+      "P@10": 0.6,
+      "nDCG@10": 0.670534576264897,
+      "Recall@10": 0.5848484848484848,
+      "MRR": 0.8333333333333334
+    },
+    "Dense": {
+      "P@5": 0.6666666666666666,
+      "nDCG@5": 0.5707873528828142,
+      "Recall@5": 0.3242424242424242,
+      "P@10": 0.3333333333333333,
+      "nDCG@10": 0.4807276679868251,
+      "Recall@10": 0.3242424242424242,
+      "MRR": 1.0
+    },
+    "Hybrid": {
+      "P@5": 0.6666666666666666,
+      "nDCG@5": 0.6621220168082194,
+      "Recall@5": 0.3242424242424242,
+      "P@10": 0.6333333333333333,
+      "nDCG@10": 0.6633706277099308,
+      "Recall@10": 0.6151515151515151,
+      "MRR": 1.0
+    },
+    "Full ranker": {
+      "P@5": 1.0,
+      "nDCG@5": 0.7851128935688955,
+      "Recall@5": 0.48484848484848486,
+      "P@10": 0.5,
+      "nDCG@10": 0.6611750618069044,
+      "Recall@10": 0.48484848484848486,
+      "MRR": 1.0
+    }
+  }
+}
