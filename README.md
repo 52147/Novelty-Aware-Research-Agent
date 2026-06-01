@@ -20,7 +20,6 @@ Unlike standard RAG systems that summarize papers independently, this system per
 
 ## 🎬 Demo GIF
 
-![Novelty-Aware Research Agent demo](assets/demo.gif)
 ---
 
 ## 🚀 How to Use
