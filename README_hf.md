@@ -34,8 +34,8 @@ Query Analyzer → Retriever (ReAct) → Ranker → Extractor → Comparison Age
 
 ## ⚠️ Notes
 
-- The corpus contains **20 papers** in the agentic AI domain
-- Each query takes **~35 seconds** (structured pipeline vs. ~4s for basic RAG)
+- The corpus contains **100 papers** in the agentic AI domain
+- Each query takes **~25 seconds** (structured pipeline vs. ~4s for basic RAG)
 - Your API key is stored in your browser session only — never logged server-side
 - Gap findings are **corpus-level observations only**, not claims about the broader literature
 
