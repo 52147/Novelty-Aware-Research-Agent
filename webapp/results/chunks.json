@@ -838,5 +838,2927 @@
     "year": 2023,
     "chunk_text": "TaskMatrix.AI automates complex multi-step tasks across digital and physical domains by combining foundation models with specialized APIs. The approach scales as new APIs are registered. Key challenges include API selection accuracy among similar APIs and error propagation in multi-step pipelines.",
     "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "selfrag_2023",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "authors": [
+      "Akari Asai",
+      "Zeqiu Wu",
+      "Yizhong Wang",
+      "Avirup Sil",
+      "Hannaneh Hajishirzi"
+    ],
+    "year": 2023,
+    "chunk_text": "Self-RAG is a framework that improves a language model's quality and factuality through retrieval and self-reflection. Rather than retrieving a fixed number of passages, the model learns to adaptively retrieve on demand and to critique both retrieved passages and its own generations using special reflection tokens.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "selfrag_2023",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "authors": [
+      "Akari Asai",
+      "Zeqiu Wu",
+      "Yizhong Wang",
+      "Avirup Sil",
+      "Hannaneh Hajishirzi"
+    ],
+    "year": 2023,
+    "chunk_text": "Retrieval-augmented generation reduces hallucination but indiscriminate retrieval can introduce irrelevant passages and degrade output. We address whether and when to retrieve, and how to assess retrieved evidence. Self-RAG trains a single model to decide retrieval timing, evaluate passage relevance, and verify whether its output is supported, using reflection tokens generated inline.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "selfrag_2023",
+    "title": "Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",
+    "authors": [
+      "Akari Asai",
+      "Zeqiu Wu",
+      "Yizhong Wang",
+      "Avirup Sil",
+      "Hannaneh Hajishirzi"
+    ],
+    "year": 2023,
+    "chunk_text": "Self-RAG outperforms standard RAG and instruction-tuned baselines on open-domain QA, reasoning, and fact verification. Adaptive retrieval with self-critique improves both factuality and citation accuracy. Future work includes extending reflection to longer-form generation and multi-hop retrieval.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "flare_2023",
+    "title": "Active Retrieval Augmented Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "Frank F. Xu",
+      "Luyu Gao",
+      "Zhiqing Sun",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "FLARE is a generation method that actively decides when and what to retrieve during long-form generation. Instead of retrieving once at the start, it anticipates upcoming content by generating a temporary next sentence and retrieving relevant documents whenever the model expresses low confidence.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "flare_2023",
+    "title": "Active Retrieval Augmented Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "Frank F. Xu",
+      "Luyu Gao",
+      "Zhiqing Sun",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "Most RAG systems retrieve once based on the initial query, which is insufficient for long-form generation where information needs shift across the output. We propose forward-looking active retrieval, where the system iteratively predicts the upcoming sentence, uses it as a query when confidence is low, and regenerates with retrieved context.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "flare_2023",
+    "title": "Active Retrieval Augmented Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "Frank F. Xu",
+      "Luyu Gao",
+      "Zhiqing Sun",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "FLARE achieves strong performance across long-form knowledge-intensive generation tasks. Actively triggering retrieval based on generation confidence outperforms single-shot and fixed-interval retrieval. The method generalizes across multiple datasets without task-specific training.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "ragsurvey_2023",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "authors": [
+      "Yunfan Gao",
+      "Yun Xiong",
+      "Xinyu Gao",
+      "Kangxiang Jia",
+      "Haofen Wang"
+    ],
+    "year": 2023,
+    "chunk_text": "This survey reviews the development of retrieval-augmented generation for large language models, organizing the field into naive RAG, advanced RAG, and modular RAG paradigms. It examines the retrieval, generation, and augmentation components and discusses evaluation frameworks and open challenges.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "ragsurvey_2023",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "authors": [
+      "Yunfan Gao",
+      "Yun Xiong",
+      "Xinyu Gao",
+      "Kangxiang Jia",
+      "Haofen Wang"
+    ],
+    "year": 2023,
+    "chunk_text": "Large language models exhibit hallucination and outdated knowledge, which retrieval augmentation mitigates by grounding generation in external sources. We survey the rapidly growing RAG literature, categorize architectures, and analyze how retrieval quality, document chunking, and fusion strategies affect downstream performance.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "ragsurvey_2023",
+    "title": "Retrieval-Augmented Generation for Large Language Models: A Survey",
+    "authors": [
+      "Yunfan Gao",
+      "Yun Xiong",
+      "Xinyu Gao",
+      "Kangxiang Jia",
+      "Haofen Wang"
+    ],
+    "year": 2023,
+    "chunk_text": "RAG has evolved from simple retrieve-then-read pipelines to modular systems with iterative and adaptive retrieval. Key open problems include retrieval robustness, evaluation methodology, and integration with long-context models. The survey provides a roadmap for future RAG research.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "replug_2023",
+    "title": "REPLUG: Retrieval-Augmented Black-Box Language Models",
+    "authors": [
+      "Weijia Shi",
+      "Sewon Min",
+      "Michihiro Yasunaga",
+      "Minjoon Seo",
+      "Mike Lewis"
+    ],
+    "year": 2023,
+    "chunk_text": "REPLUG treats the language model as a frozen black box and prepends retrieved documents to the input. A tunable retriever is trained using the language model's own output probabilities as a supervision signal, requiring no access to model internals.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "replug_2023",
+    "title": "REPLUG: Retrieval-Augmented Black-Box Language Models",
+    "authors": [
+      "Weijia Shi",
+      "Sewon Min",
+      "Michihiro Yasunaga",
+      "Minjoon Seo",
+      "Mike Lewis"
+    ],
+    "year": 2023,
+    "chunk_text": "Many strong language models are available only through APIs, preventing fine-tuning for retrieval augmentation. We ask whether retrieval can improve such black-box models. REPLUG trains the retriever to find documents that minimize the language model's perplexity on the target, aligning retrieval with the frozen model.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "replug_2023",
+    "title": "REPLUG: Retrieval-Augmented Black-Box Language Models",
+    "authors": [
+      "Weijia Shi",
+      "Sewon Min",
+      "Michihiro Yasunaga",
+      "Minjoon Seo",
+      "Mike Lewis"
+    ],
+    "year": 2023,
+    "chunk_text": "REPLUG improves black-box language model performance on language modeling and downstream tasks without modifying the model. Training the retriever against the model's output distribution is an effective supervision signal. The approach is compatible with arbitrary frozen models.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "hyde_2022",
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "authors": [
+      "Luyu Gao",
+      "Xueguang Ma",
+      "Jimmy Lin",
+      "Jamie Callan"
+    ],
+    "year": 2022,
+    "chunk_text": "HyDE performs zero-shot dense retrieval by first generating a hypothetical document that answers the query using a language model, then encoding that hypothetical document to retrieve real documents. This sidesteps the need for relevance-labeled training data.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "hyde_2022",
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "authors": [
+      "Luyu Gao",
+      "Xueguang Ma",
+      "Jimmy Lin",
+      "Jamie Callan"
+    ],
+    "year": 2022,
+    "chunk_text": "Dense retrieval typically requires relevance labels to train query and document encoders, which are unavailable in many settings. We propose generating a hypothetical answer document from the query and using its embedding for retrieval, leveraging the language model to bridge the query-document gap.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "hyde_2022",
+    "title": "Precise Zero-Shot Dense Retrieval without Relevance Labels",
+    "authors": [
+      "Luyu Gao",
+      "Xueguang Ma",
+      "Jimmy Lin",
+      "Jamie Callan"
+    ],
+    "year": 2022,
+    "chunk_text": "HyDE matches or exceeds strong supervised dense retrievers across diverse tasks and languages without any relevance labels. Hypothetical document embeddings capture relevance patterns effectively. The method is a practical zero-shot retrieval approach.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "crag_2024",
+    "title": "Corrective Retrieval Augmented Generation",
+    "authors": [
+      "Shi-Qi Yan",
+      "Jia-Chen Gu",
+      "Yun Zhu",
+      "Zhen-Hua Ling"
+    ],
+    "year": 2024,
+    "chunk_text": "Corrective RAG introduces a lightweight retrieval evaluator that assesses the quality of retrieved documents and triggers corrective actions. When retrieval is judged incorrect or ambiguous, the system falls back to web search and decomposes documents to filter irrelevant content.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "crag_2024",
+    "title": "Corrective Retrieval Augmented Generation",
+    "authors": [
+      "Shi-Qi Yan",
+      "Jia-Chen Gu",
+      "Yun Zhu",
+      "Zhen-Hua Ling"
+    ],
+    "year": 2024,
+    "chunk_text": "RAG performance degrades sharply when retrieval returns irrelevant documents. We propose evaluating retrieval quality before generation and applying corrective strategies. A retrieval evaluator assigns confidence scores that route the system toward using, discarding, or supplementing retrieved knowledge.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "crag_2024",
+    "title": "Corrective Retrieval Augmented Generation",
+    "authors": [
+      "Shi-Qi Yan",
+      "Jia-Chen Gu",
+      "Yun Zhu",
+      "Zhen-Hua Ling"
+    ],
+    "year": 2024,
+    "chunk_text": "Corrective RAG improves robustness to retrieval errors across short- and long-form generation tasks. Decoupling retrieval evaluation from generation lets the system recover from poor retrieval. The approach is plug-and-play with existing RAG pipelines.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "dpr_2020",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Vladimir Karpukhin",
+      "Barlas Oguz",
+      "Sewon Min",
+      "Patrick Lewis",
+      "Wen-tau Yih"
+    ],
+    "year": 2020,
+    "chunk_text": "Dense Passage Retrieval learns dense vector representations for questions and passages using a dual-encoder trained on question-passage pairs. It replaces sparse term-matching retrieval such as BM25 with learned dense embeddings for open-domain question answering.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "dpr_2020",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Vladimir Karpukhin",
+      "Barlas Oguz",
+      "Sewon Min",
+      "Patrick Lewis",
+      "Wen-tau Yih"
+    ],
+    "year": 2020,
+    "chunk_text": "Open-domain QA requires retrieving relevant passages from a large corpus. Traditional sparse methods rely on lexical overlap and miss semantic matches. We train a dual-encoder to embed questions and passages into a shared space where relevant pairs are close, enabling efficient maximum inner-product search.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "dpr_2020",
+    "title": "Dense Passage Retrieval for Open-Domain Question Answering",
+    "authors": [
+      "Vladimir Karpukhin",
+      "Barlas Oguz",
+      "Sewon Min",
+      "Patrick Lewis",
+      "Wen-tau Yih"
+    ],
+    "year": 2020,
+    "chunk_text": "Dense Passage Retrieval substantially outperforms BM25 on open-domain QA benchmarks and improves end-to-end answer accuracy. Learned dense representations capture semantic relevance beyond lexical matching. DPR became a foundation for subsequent retrieval-augmented systems.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "realm_2020",
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "authors": [
+      "Kelvin Guu",
+      "Kenton Lee",
+      "Zora Tung",
+      "Panupong Pasupat",
+      "Ming-Wei Chang"
+    ],
+    "year": 2020,
+    "chunk_text": "REALM augments language model pre-training with a learned neural retriever over a textual knowledge corpus. The retriever is trained end-to-end with the language model using masked language modeling as the signal, allowing the model to attend to retrieved documents during prediction.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "realm_2020",
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "authors": [
+      "Kelvin Guu",
+      "Kenton Lee",
+      "Zora Tung",
+      "Panupong Pasupat",
+      "Ming-Wei Chang"
+    ],
+    "year": 2020,
+    "chunk_text": "Language models store knowledge implicitly in parameters, making it hard to interpret or update. We propose learning a knowledge retriever jointly with the language model during pre-training, so the model explicitly retrieves and conditions on documents from a corpus when predicting masked tokens.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "realm_2020",
+    "title": "REALM: Retrieval-Augmented Language Model Pre-Training",
+    "authors": [
+      "Kelvin Guu",
+      "Kenton Lee",
+      "Zora Tung",
+      "Panupong Pasupat",
+      "Ming-Wei Chang"
+    ],
+    "year": 2020,
+    "chunk_text": "REALM improves open-domain QA over models that store knowledge only in parameters. End-to-end training of retrieval with language modeling produces a retriever aligned with the model's needs. Explicit retrieval also improves interpretability and updatability.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "atlas_2022",
+    "title": "Atlas: Few-shot Learning with Retrieval Augmented Language Models",
+    "authors": [
+      "Gautier Izacard",
+      "Patrick Lewis",
+      "Maria Lomeli",
+      "Lucas Hosseini",
+      "Edouard Grave"
+    ],
+    "year": 2022,
+    "chunk_text": "Atlas is a retrieval-augmented language model designed for few-shot learning on knowledge-intensive tasks. It jointly trains a dense retriever and a sequence-to-sequence model, achieving strong performance with far fewer parameters than comparable closed-book models.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "atlas_2022",
+    "title": "Atlas: Few-shot Learning with Retrieval Augmented Language Models",
+    "authors": [
+      "Gautier Izacard",
+      "Patrick Lewis",
+      "Maria Lomeli",
+      "Lucas Hosseini",
+      "Edouard Grave"
+    ],
+    "year": 2022,
+    "chunk_text": "Large closed-book models memorize knowledge but require enormous scale. We investigate whether retrieval augmentation enables strong few-shot performance at smaller scale. Atlas couples a Contriever-style retriever with a Fusion-in-Decoder reader, training both on few examples.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "atlas_2022",
+    "title": "Atlas: Few-shot Learning with Retrieval Augmented Language Models",
+    "authors": [
+      "Gautier Izacard",
+      "Patrick Lewis",
+      "Maria Lomeli",
+      "Lucas Hosseini",
+      "Edouard Grave"
+    ],
+    "year": 2022,
+    "chunk_text": "Atlas matches much larger closed-book models on knowledge-intensive tasks using orders of magnitude fewer parameters. Retrieval augmentation is especially effective in few-shot regimes. Decoupling knowledge storage from reasoning improves parameter efficiency.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "incontextralm_2023",
+    "title": "In-Context Retrieval-Augmented Language Models",
+    "authors": [
+      "Ori Ram",
+      "Yoav Levine",
+      "Itay Dalmedigos",
+      "Dor Muhlgay",
+      "Yoav Shoham"
+    ],
+    "year": 2023,
+    "chunk_text": "In-Context RALM prepends retrieved documents to the input of an off-the-shelf language model without any further training. The work shows that even simple BM25 retrieval combined with frozen models yields substantial language modeling improvements.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "incontextralm_2023",
+    "title": "In-Context Retrieval-Augmented Language Models",
+    "authors": [
+      "Ori Ram",
+      "Yoav Levine",
+      "Itay Dalmedigos",
+      "Dor Muhlgay",
+      "Yoav Shoham"
+    ],
+    "year": 2023,
+    "chunk_text": "Retrieval augmentation often requires specialized training. We study how far one can go by simply prepending retrieved documents to a frozen language model's context. We analyze retrieval frequency, document ranking, and query construction to maximize gains without changing model weights.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "incontextralm_2023",
+    "title": "In-Context Retrieval-Augmented Language Models",
+    "authors": [
+      "Ori Ram",
+      "Yoav Levine",
+      "Itay Dalmedigos",
+      "Dor Muhlgay",
+      "Yoav Shoham"
+    ],
+    "year": 2023,
+    "chunk_text": "In-context retrieval augmentation improves frozen language models across model sizes with no training. Retrieval stride and reranking matter substantially. The simplicity makes the approach broadly applicable to existing models.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "retro_2022",
+    "title": "Improving Language Models by Retrieving from Trillions of Tokens",
+    "authors": [
+      "Sebastian Borgeaud",
+      "Arthur Mensch",
+      "Jordan Hoffmann",
+      "Trevor Cai",
+      "Laurent Sifre"
+    ],
+    "year": 2022,
+    "chunk_text": "RETRO enhances language models by retrieving from a database of trillions of tokens via chunked cross-attention. A relatively small model augmented with retrieval matches the performance of much larger models on language modeling.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "retro_2022",
+    "title": "Improving Language Models by Retrieving from Trillions of Tokens",
+    "authors": [
+      "Sebastian Borgeaud",
+      "Arthur Mensch",
+      "Jordan Hoffmann",
+      "Trevor Cai",
+      "Laurent Sifre"
+    ],
+    "year": 2022,
+    "chunk_text": "Scaling parameters is an expensive route to better language modeling. We explore scaling retrieval instead. RETRO retrieves nearest-neighbor chunks from a massive text database and integrates them through a chunked cross-attention mechanism interleaved with standard layers.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "retro_2022",
+    "title": "Improving Language Models by Retrieving from Trillions of Tokens",
+    "authors": [
+      "Sebastian Borgeaud",
+      "Arthur Mensch",
+      "Jordan Hoffmann",
+      "Trevor Cai",
+      "Laurent Sifre"
+    ],
+    "year": 2022,
+    "chunk_text": "RETRO with retrieval from trillions of tokens matches models 25 times larger on language modeling. Retrieval is a competitive alternative to parameter scaling. The chunked cross-attention design integrates retrieved context efficiently.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "fid_2021",
+    "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "authors": [
+      "Gautier Izacard",
+      "Edouard Grave"
+    ],
+    "year": 2021,
+    "chunk_text": "Fusion-in-Decoder retrieves multiple passages and processes them independently in the encoder, then fuses their representations in the decoder to generate answers. This allows the model to aggregate evidence across many retrieved passages efficiently.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "fid_2021",
+    "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "authors": [
+      "Gautier Izacard",
+      "Edouard Grave"
+    ],
+    "year": 2021,
+    "chunk_text": "Generative open-domain QA must combine evidence from many retrieved passages. Concatenating passages is limited by sequence length. We encode each passage separately and let the decoder attend jointly across all encoded passages, scaling to large numbers of retrieved documents.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "fid_2021",
+    "title": "Leveraging Passage Retrieval with Generative Models for Open Domain Question Answering",
+    "authors": [
+      "Gautier Izacard",
+      "Edouard Grave"
+    ],
+    "year": 2021,
+    "chunk_text": "Fusion-in-Decoder achieves strong open-domain QA performance and scales with the number of retrieved passages. Independent encoding with joint decoding is an efficient evidence aggregation strategy. The architecture became widely adopted in retrieval-augmented QA.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "selfconsistency_2022",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "authors": [
+      "Xuezhi Wang",
+      "Jason Wei",
+      "Dale Schuurmans",
+      "Quoc Le",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Self-consistency replaces greedy decoding in chain-of-thought prompting with sampling multiple diverse reasoning paths and selecting the most consistent final answer by majority vote. This simple decoding strategy substantially improves reasoning accuracy.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "selfconsistency_2022",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "authors": [
+      "Xuezhi Wang",
+      "Jason Wei",
+      "Dale Schuurmans",
+      "Quoc Le",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Chain-of-thought prompting elicits step-by-step reasoning but greedy decoding commits to a single path that may contain errors. We hypothesize that complex problems admit multiple valid reasoning paths converging on the same answer. Sampling diverse paths and marginalizing over them should improve robustness.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "selfconsistency_2022",
+    "title": "Self-Consistency Improves Chain of Thought Reasoning in Language Models",
+    "authors": [
+      "Xuezhi Wang",
+      "Jason Wei",
+      "Dale Schuurmans",
+      "Quoc Le",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Self-consistency yields large gains across arithmetic and commonsense reasoning benchmarks. Aggregating multiple sampled reasoning paths is more reliable than any single path. The method requires no additional training or supervision.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "leasttomost_2022",
+    "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+    "authors": [
+      "Denny Zhou",
+      "Nathanael Scharli",
+      "Le Hou",
+      "Jason Wei",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Least-to-most prompting decomposes a complex problem into a sequence of simpler subproblems and solves them in order, using the answers to earlier subproblems as context for later ones. This enables generalization to harder problems than seen in the prompt.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "leasttomost_2022",
+    "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+    "authors": [
+      "Denny Zhou",
+      "Nathanael Scharli",
+      "Le Hou",
+      "Jason Wei",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Chain-of-thought struggles to generalize from easy demonstrations to harder problems. We propose explicitly decomposing problems into ordered subproblems. The model first reduces a problem to subproblems, then sequentially solves each, building toward the final answer.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "leasttomost_2022",
+    "title": "Least-to-Most Prompting Enables Complex Reasoning in Large Language Models",
+    "authors": [
+      "Denny Zhou",
+      "Nathanael Scharli",
+      "Le Hou",
+      "Jason Wei",
+      "Ed Chi"
+    ],
+    "year": 2022,
+    "chunk_text": "Least-to-most prompting solves problems substantially harder than the prompt examples, improving compositional generalization. Explicit decomposition outperforms standard chain-of-thought on symbolic and mathematical reasoning. The two-stage approach is broadly applicable.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "got_2023",
+    "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+    "authors": [
+      "Maciej Besta",
+      "Nils Blach",
+      "Ales Kubicek",
+      "Robert Gerstenberger",
+      "Torsten Hoefler"
+    ],
+    "year": 2023,
+    "chunk_text": "Graph of Thoughts models reasoning as a graph where vertices are intermediate thoughts and edges are dependencies, enabling aggregation, refinement, and feedback loops over thoughts. This generalizes chain and tree structures to arbitrary graphs.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "got_2023",
+    "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+    "authors": [
+      "Maciej Besta",
+      "Nils Blach",
+      "Ales Kubicek",
+      "Robert Gerstenberger",
+      "Torsten Hoefler"
+    ],
+    "year": 2023,
+    "chunk_text": "Tree-of-thoughts allows branching reasoning but cannot merge or refine thoughts arbitrarily. We represent reasoning as a graph, where thoughts can be combined, looped, and distilled. This richer structure supports operations like aggregating partial solutions and iteratively improving them.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "got_2023",
+    "title": "Graph of Thoughts: Solving Elaborate Problems with Large Language Models",
+    "authors": [
+      "Maciej Besta",
+      "Nils Blach",
+      "Ales Kubicek",
+      "Robert Gerstenberger",
+      "Torsten Hoefler"
+    ],
+    "year": 2023,
+    "chunk_text": "Graph of Thoughts improves solution quality and reduces cost on tasks like sorting and set operations compared to tree-of-thoughts. Graph-structured reasoning enables aggregation and refinement beyond tree branching. The framework is extensible to new thought transformations.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "pal_2022",
+    "title": "PAL: Program-aided Language Models",
+    "authors": [
+      "Luyu Gao",
+      "Aman Madaan",
+      "Shuyan Zhou",
+      "Uri Alon",
+      "Graham Neubig"
+    ],
+    "year": 2022,
+    "chunk_text": "Program-aided language models generate reasoning steps as executable program code and offload the actual computation to a Python interpreter. This separates reasoning from calculation, eliminating arithmetic errors in the model's output.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "pal_2022",
+    "title": "PAL: Program-aided Language Models",
+    "authors": [
+      "Luyu Gao",
+      "Aman Madaan",
+      "Shuyan Zhou",
+      "Uri Alon",
+      "Graham Neubig"
+    ],
+    "year": 2022,
+    "chunk_text": "Language models reason in natural language but make arithmetic and logical execution errors. We propose having the model write programs that express the reasoning steps, then execute them with an interpreter. The model focuses on decomposition while the interpreter handles exact computation.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "pal_2022",
+    "title": "PAL: Program-aided Language Models",
+    "authors": [
+      "Luyu Gao",
+      "Aman Madaan",
+      "Shuyan Zhou",
+      "Uri Alon",
+      "Graham Neubig"
+    ],
+    "year": 2022,
+    "chunk_text": "PAL outperforms chain-of-thought on mathematical and symbolic reasoning by delegating computation to an interpreter. Separating reasoning from execution removes a major error source. The approach generalizes across reasoning tasks requiring precise computation.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "rewoo_2023",
+    "title": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
+    "authors": [
+      "Binfeng Xu",
+      "Zhiyuan Peng",
+      "Bowen Lei",
+      "Subhabrata Mukherjee",
+      "Dongkuan Xu"
+    ],
+    "year": 2023,
+    "chunk_text": "ReWOO decouples the reasoning process from external tool observations by generating a complete plan of tool calls upfront, then executing them, then combining results. This reduces redundant LLM calls compared to interleaved reasoning-acting approaches.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "rewoo_2023",
+    "title": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
+    "authors": [
+      "Binfeng Xu",
+      "Zhiyuan Peng",
+      "Bowen Lei",
+      "Subhabrata Mukherjee",
+      "Dongkuan Xu"
+    ],
+    "year": 2023,
+    "chunk_text": "Interleaved reasoning-acting agents like ReAct repeatedly feed observations back into the model, incurring high token cost. We propose separating planning from execution: the model produces a full reasoning plan with placeholder evidence, tools fill the placeholders, and a solver combines them.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "rewoo_2023",
+    "title": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
+    "authors": [
+      "Binfeng Xu",
+      "Zhiyuan Peng",
+      "Bowen Lei",
+      "Subhabrata Mukherjee",
+      "Dongkuan Xu"
+    ],
+    "year": 2023,
+    "chunk_text": "ReWOO achieves comparable or better accuracy than ReAct while using substantially fewer tokens. Decoupling reasoning from observation reduces redundant context. The modular design also improves robustness to tool failures.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "autocot_2022",
+    "title": "Automatic Chain of Thought Prompting in Large Language Models",
+    "authors": [
+      "Zhuosheng Zhang",
+      "Aston Zhang",
+      "Mu Li",
+      "Alex Smola"
+    ],
+    "year": 2022,
+    "chunk_text": "Auto-CoT automatically constructs chain-of-thought demonstrations by clustering questions and generating reasoning chains for representative examples, removing the need for manually written demonstrations.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "autocot_2022",
+    "title": "Automatic Chain of Thought Prompting in Large Language Models",
+    "authors": [
+      "Zhuosheng Zhang",
+      "Aston Zhang",
+      "Mu Li",
+      "Alex Smola"
+    ],
+    "year": 2022,
+    "chunk_text": "Chain-of-thought prompting requires hand-crafted reasoning demonstrations, which is labor-intensive. We automate demonstration construction by clustering questions for diversity and using zero-shot prompting to generate reasoning chains for cluster representatives, then using these as demonstrations.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "autocot_2022",
+    "title": "Automatic Chain of Thought Prompting in Large Language Models",
+    "authors": [
+      "Zhuosheng Zhang",
+      "Aston Zhang",
+      "Mu Li",
+      "Alex Smola"
+    ],
+    "year": 2022,
+    "chunk_text": "Auto-CoT matches manually designed chain-of-thought prompts across reasoning benchmarks. Diversity-based sampling of demonstrations is key to performance. The method removes manual prompt engineering for chain-of-thought.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "selfask_2022",
+    "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+    "authors": [
+      "Ofir Press",
+      "Muru Zhang",
+      "Sewon Min",
+      "Ludwig Schmidt",
+      "Mike Lewis"
+    ],
+    "year": 2022,
+    "chunk_text": "This work introduces the self-ask prompting method, where the model explicitly asks and answers follow-up subquestions before producing a final answer. Self-ask narrows the compositionality gap and integrates naturally with a search engine.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "selfask_2022",
+    "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+    "authors": [
+      "Ofir Press",
+      "Muru Zhang",
+      "Sewon Min",
+      "Ludwig Schmidt",
+      "Mike Lewis"
+    ],
+    "year": 2022,
+    "chunk_text": "Language models often know the facts needed for a multi-hop question yet fail to compose them. We measure this compositionality gap and propose self-ask, where the model decomposes a question into explicit follow-up questions, optionally answered by a search engine, before composing the final answer.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "selfask_2022",
+    "title": "Measuring and Narrowing the Compositionality Gap in Language Models",
+    "authors": [
+      "Ofir Press",
+      "Muru Zhang",
+      "Sewon Min",
+      "Ludwig Schmidt",
+      "Mike Lewis"
+    ],
+    "year": 2022,
+    "chunk_text": "Self-ask improves multi-hop question answering and narrows the compositionality gap. Explicit subquestion decomposition makes reasoning steps inspectable and supports tool integration. The gap persists even as model scale increases.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "decomposed_2022",
+    "title": "Decomposed Prompting: A Modular Approach for Solving Complex Tasks",
+    "authors": [
+      "Tushar Khot",
+      "Harsh Trivedi",
+      "Matthew Finlayson",
+      "Yao Fu",
+      "Ashish Sabharwal"
+    ],
+    "year": 2022,
+    "chunk_text": "Decomposed prompting solves complex tasks by breaking them into subtasks, each handled by a dedicated prompt that can be further decomposed recursively or delegated to specialized handlers including retrieval and symbolic operations.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "decomposed_2022",
+    "title": "Decomposed Prompting: A Modular Approach for Solving Complex Tasks",
+    "authors": [
+      "Tushar Khot",
+      "Harsh Trivedi",
+      "Matthew Finlayson",
+      "Yao Fu",
+      "Ashish Sabharwal"
+    ],
+    "year": 2022,
+    "chunk_text": "Single monolithic prompts struggle with complex compositional tasks. We propose a modular library of decomposition prompts, where a controller routes subtasks to specialized handlers. Handlers can recurse, call other handlers, or invoke external operations, enabling flexible task solving.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "decomposed_2022",
+    "title": "Decomposed Prompting: A Modular Approach for Solving Complex Tasks",
+    "authors": [
+      "Tushar Khot",
+      "Harsh Trivedi",
+      "Matthew Finlayson",
+      "Yao Fu",
+      "Ashish Sabharwal"
+    ],
+    "year": 2022,
+    "chunk_text": "Decomposed prompting outperforms chain-of-thought on tasks requiring compositional and recursive structure. Modular subtask handlers improve reuse and debugging. The approach supports integrating symbolic and retrieval operations into prompting.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "gorilla_2023",
+    "title": "Gorilla: Large Language Model Connected with Massive APIs",
+    "authors": [
+      "Shishir G. Patil",
+      "Tianjun Zhang",
+      "Xin Wang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "Gorilla is a finetuned language model that generates accurate API calls across large, changing API collections. It uses retrieval-aware training so the model can adapt to documentation changes at inference time and reduce hallucinated API usage.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "gorilla_2023",
+    "title": "Gorilla: Large Language Model Connected with Massive APIs",
+    "authors": [
+      "Shishir G. Patil",
+      "Tianjun Zhang",
+      "Xin Wang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "Language models struggle to invoke the correct API among thousands of options and hallucinate arguments. We finetune a model with a document retriever in the loop, teaching it to consult retrieved API documentation when generating calls. This handles overlapping and evolving APIs.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "gorilla_2023",
+    "title": "Gorilla: Large Language Model Connected with Massive APIs",
+    "authors": [
+      "Shishir G. Patil",
+      "Tianjun Zhang",
+      "Xin Wang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "Gorilla outperforms general models including GPT-4 at writing correct API calls and adapts to documentation changes via retrieval. Retrieval-aware training reduces hallucination. The approach scales to large, dynamic tool collections.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "critic_2023",
+    "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+    "authors": [
+      "Zhibin Gou",
+      "Zhihong Shao",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Weizhu Chen"
+    ],
+    "year": 2023,
+    "chunk_text": "CRITIC enables language models to verify and correct their own outputs by interacting with external tools such as search engines and code interpreters. The model critiques its output using tool feedback, then revises accordingly.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "critic_2023",
+    "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+    "authors": [
+      "Zhibin Gou",
+      "Zhihong Shao",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Weizhu Chen"
+    ],
+    "year": 2023,
+    "chunk_text": "Language models cannot reliably self-correct using only their internal knowledge. We propose grounding self-correction in external tools: the model generates an output, queries tools to validate it, and uses the returned evidence to critique and revise, mirroring how humans verify claims.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "critic_2023",
+    "title": "CRITIC: Large Language Models Can Self-Correct with Tool-Interactive Critiquing",
+    "authors": [
+      "Zhibin Gou",
+      "Zhihong Shao",
+      "Yeyun Gong",
+      "Yelong Shen",
+      "Weizhu Chen"
+    ],
+    "year": 2023,
+    "chunk_text": "CRITIC improves accuracy across question answering, mathematical reasoning, and toxicity reduction by grounding self-correction in tools. Tool feedback is more reliable than purely internal critique. External verification is essential for trustworthy self-correction.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "chameleon_2023",
+    "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models",
+    "authors": [
+      "Pan Lu",
+      "Baolin Peng",
+      "Hao Cheng",
+      "Michel Galley",
+      "Jianfeng Gao"
+    ],
+    "year": 2023,
+    "chunk_text": "Chameleon augments language models with a set of plug-and-play modules including vision models, search engines, and Python functions, composing them into programs to solve multimodal and knowledge-intensive reasoning tasks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "chameleon_2023",
+    "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models",
+    "authors": [
+      "Pan Lu",
+      "Baolin Peng",
+      "Hao Cheng",
+      "Michel Galley",
+      "Jianfeng Gao"
+    ],
+    "year": 2023,
+    "chunk_text": "Language models lack access to up-to-date information, precise computation, and visual perception. We build a compositional reasoning system where the LLM acts as a planner that assembles sequences of modules from a toolbox to address each query's specific needs.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "chameleon_2023",
+    "title": "Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models",
+    "authors": [
+      "Pan Lu",
+      "Baolin Peng",
+      "Hao Cheng",
+      "Michel Galley",
+      "Jianfeng Gao"
+    ],
+    "year": 2023,
+    "chunk_text": "Chameleon achieves strong results on science question answering and tabular reasoning by composing heterogeneous tools. LLM-driven program synthesis over a module library is flexible and interpretable. Plug-and-play design eases extension with new tools.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "restgpt_2023",
+    "title": "RestGPT: Connecting Large Language Models with Real-World RESTful APIs",
+    "authors": [
+      "Yifan Song",
+      "Weimin Xiong",
+      "Dawei Zhu",
+      "Wenhao Wu",
+      "Sujian Li"
+    ],
+    "year": 2023,
+    "chunk_text": "RestGPT connects language models to real-world RESTful APIs through a coarse-to-fine planning module and an API executor that handles authentication, parameter binding, and response parsing for complex multi-step tasks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "restgpt_2023",
+    "title": "RestGPT: Connecting Large Language Models with Real-World RESTful APIs",
+    "authors": [
+      "Yifan Song",
+      "Weimin Xiong",
+      "Dawei Zhu",
+      "Wenhao Wu",
+      "Sujian Li"
+    ],
+    "year": 2023,
+    "chunk_text": "Real-world APIs are numerous, complex, and return large structured responses that challenge language model agents. We propose a hierarchical planner that decomposes user instructions into API calls and an executor that manages the practical details of invoking RESTful services.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "restgpt_2023",
+    "title": "RestGPT: Connecting Large Language Models with Real-World RESTful APIs",
+    "authors": [
+      "Yifan Song",
+      "Weimin Xiong",
+      "Dawei Zhu",
+      "Wenhao Wu",
+      "Sujian Li"
+    ],
+    "year": 2023,
+    "chunk_text": "RestGPT completes complex tasks over real APIs such as movie databases and music services. Coarse-to-fine planning handles API complexity better than flat planning. Robust response parsing is critical for real-world tool use.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "memgpt_2023",
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": [
+      "Charles Packer",
+      "Sarah Wooders",
+      "Kevin Lin",
+      "Vivian Fang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "MemGPT manages a tiered memory hierarchy analogous to an operating system, allowing a language model to page information between a limited context window and external storage. This enables unbounded effective context for long conversations and document analysis.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "memgpt_2023",
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": [
+      "Charles Packer",
+      "Sarah Wooders",
+      "Kevin Lin",
+      "Vivian Fang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "Fixed context windows limit language models on long conversations and large documents. Inspired by operating system memory management, we give the model functions to move data between its context and external storage, letting it decide what to keep in working memory and what to retrieve.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "memgpt_2023",
+    "title": "MemGPT: Towards LLMs as Operating Systems",
+    "authors": [
+      "Charles Packer",
+      "Sarah Wooders",
+      "Kevin Lin",
+      "Vivian Fang",
+      "Joseph E. Gonzalez"
+    ],
+    "year": 2023,
+    "chunk_text": "MemGPT handles long-term conversation and large-document analysis beyond the native context window. OS-inspired memory paging lets the model manage its own context. Self-directed memory management is a promising direction for long-horizon agents.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "expel_2023",
+    "title": "ExpeL: LLM Agents Are Experiential Learners",
+    "authors": [
+      "Andrew Zhao",
+      "Daniel Huang",
+      "Quentin Xu",
+      "Matthieu Lin",
+      "Gao Huang"
+    ],
+    "year": 2023,
+    "chunk_text": "ExpeL enables language model agents to learn from experience without parameter updates by collecting trajectories across training tasks, extracting natural-language insights, and retrieving relevant experiences at test time.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "expel_2023",
+    "title": "ExpeL: LLM Agents Are Experiential Learners",
+    "authors": [
+      "Andrew Zhao",
+      "Daniel Huang",
+      "Quentin Xu",
+      "Matthieu Lin",
+      "Gao Huang"
+    ],
+    "year": 2023,
+    "chunk_text": "Fine-tuning agents is costly and proprietary models cannot be updated. We ask whether agents can improve from experience using only their context. ExpeL gathers successful and failed trajectories, distills cross-task insights, and recalls similar past experiences when facing new tasks.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "expel_2023",
+    "title": "ExpeL: LLM Agents Are Experiential Learners",
+    "authors": [
+      "Andrew Zhao",
+      "Daniel Huang",
+      "Quentin Xu",
+      "Matthieu Lin",
+      "Gao Huang"
+    ],
+    "year": 2023,
+    "chunk_text": "ExpeL improves agent performance across tasks without any gradient updates. Extracting and retrieving natural-language experience is an effective learning mechanism for frozen models. Experiential learning complements in-context and tool-use approaches.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "fireact_2023",
+    "title": "FireAct: Toward Language Agent Fine-tuning",
+    "authors": [
+      "Baian Chen",
+      "Chang Shu",
+      "Ehsan Shareghi",
+      "Nigel Collier",
+      "Yu Su"
+    ],
+    "year": 2023,
+    "chunk_text": "FireAct studies fine-tuning language models for agentic tasks using trajectories generated by stronger models across multiple prompting methods. It shows that fine-tuning on diverse agent trajectories improves smaller models substantially.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "fireact_2023",
+    "title": "FireAct: Toward Language Agent Fine-tuning",
+    "authors": [
+      "Baian Chen",
+      "Chang Shu",
+      "Ehsan Shareghi",
+      "Nigel Collier",
+      "Yu Su"
+    ],
+    "year": 2023,
+    "chunk_text": "Most language agents rely on prompting frozen models, leaving fine-tuning underexplored. We investigate fine-tuning agents on trajectories collected from multiple tasks and prompting methods including ReAct and chain-of-thought. We analyze how trajectory diversity affects agent robustness.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "fireact_2023",
+    "title": "FireAct: Toward Language Agent Fine-tuning",
+    "authors": [
+      "Baian Chen",
+      "Chang Shu",
+      "Ehsan Shareghi",
+      "Nigel Collier",
+      "Yu Su"
+    ],
+    "year": 2023,
+    "chunk_text": "Fine-tuning on diverse agent trajectories improves smaller models' performance and robustness over prompting alone. Mixing prompting methods during fine-tuning helps generalization. Agent fine-tuning is a promising complement to prompting-based agents.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "agentverse_2023",
+    "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
+    "authors": [
+      "Weize Chen",
+      "Yusheng Su",
+      "Jingwei Zuo",
+      "Cheng Yang",
+      "Zhiyuan Liu"
+    ],
+    "year": 2023,
+    "chunk_text": "AgentVerse is a framework for orchestrating multiple language model agents through expert recruitment, collaborative decision-making, action execution, and evaluation phases. It studies emergent social behaviors among collaborating agents.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "agentverse_2023",
+    "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
+    "authors": [
+      "Weize Chen",
+      "Yusheng Su",
+      "Jingwei Zuo",
+      "Cheng Yang",
+      "Zhiyuan Liu"
+    ],
+    "year": 2023,
+    "chunk_text": "Coordinating multiple agents toward a shared goal requires structured collaboration. We propose a framework that dynamically recruits expert agents, conducts collaborative decision-making, executes actions, and evaluates outcomes in iterative rounds, while observing emergent cooperative and competitive behaviors.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "agentverse_2023",
+    "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
+    "authors": [
+      "Weize Chen",
+      "Yusheng Su",
+      "Jingwei Zuo",
+      "Cheng Yang",
+      "Zhiyuan Liu"
+    ],
+    "year": 2023,
+    "chunk_text": "AgentVerse enables multi-agent groups to outperform individual agents on reasoning and coding tasks. Structured collaboration phases improve coordination. The framework surfaces emergent behaviors relevant to multi-agent system design.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "multidebate_2023",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "authors": [
+      "Yilun Du",
+      "Shuang Li",
+      "Antonio Torralba",
+      "Joshua B. Tenenbaum",
+      "Igor Mordatch"
+    ],
+    "year": 2023,
+    "chunk_text": "This work has multiple language model instances propose and debate their individual responses over several rounds, converging on a shared answer. Multiagent debate improves factual accuracy and reasoning over single-model baselines.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "multidebate_2023",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "authors": [
+      "Yilun Du",
+      "Shuang Li",
+      "Antonio Torralba",
+      "Joshua B. Tenenbaum",
+      "Igor Mordatch"
+    ],
+    "year": 2023,
+    "chunk_text": "A single language model may commit to flawed reasoning. We propose having multiple model instances independently answer, then critique and revise their answers in light of others' responses across debate rounds. This mirrors deliberative human reasoning and surfaces errors.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "multidebate_2023",
+    "title": "Improving Factuality and Reasoning in Language Models through Multiagent Debate",
+    "authors": [
+      "Yilun Du",
+      "Shuang Li",
+      "Antonio Torralba",
+      "Joshua B. Tenenbaum",
+      "Igor Mordatch"
+    ],
+    "year": 2023,
+    "chunk_text": "Multiagent debate improves factuality and reasoning across diverse tasks. Iterative cross-examination among model instances reduces errors and hallucination. Debate is a simple, training-free way to improve output quality.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "metaagents_2023",
+    "title": "MetaAgents: Simulating Interactions of Human Behaviors for LLM-based Task-oriented Coordination",
+    "authors": [
+      "Yuan Li",
+      "Yixuan Zhang",
+      "Lichao Sun"
+    ],
+    "year": 2023,
+    "chunk_text": "MetaAgents studies coordination among language model agents in simulated task-oriented social environments, examining how agents with different roles negotiate, plan, and assign tasks to achieve collective goals.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "metaagents_2023",
+    "title": "MetaAgents: Simulating Interactions of Human Behaviors for LLM-based Task-oriented Coordination",
+    "authors": [
+      "Yuan Li",
+      "Yixuan Zhang",
+      "Lichao Sun"
+    ],
+    "year": 2023,
+    "chunk_text": "Coordinating language model agents in realistic social settings remains challenging. We construct a simulated environment where agents with distinct roles must communicate and divide labor. We analyze how reasoning and coordination capabilities affect collective task success.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "metaagents_2023",
+    "title": "MetaAgents: Simulating Interactions of Human Behaviors for LLM-based Task-oriented Coordination",
+    "authors": [
+      "Yuan Li",
+      "Yixuan Zhang",
+      "Lichao Sun"
+    ],
+    "year": 2023,
+    "chunk_text": "MetaAgents reveals both capabilities and limitations of language model agents in coordinated task-oriented settings. Role specialization and communication structure strongly affect outcomes. Coordination remains a bottleneck for complex multi-agent tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "roco_2023",
+    "title": "RoCo: Dialectic Multi-Robot Collaboration with Large Language Models",
+    "authors": [
+      "Zhao Mandi",
+      "Shreeya Jain",
+      "Shuran Song"
+    ],
+    "year": 2023,
+    "chunk_text": "RoCo uses language models for multi-robot collaboration, where each robot agent reasons and dialogues to jointly plan, then validates the plan against motion constraints. It combines high-level language reasoning with low-level motion planning.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "roco_2023",
+    "title": "RoCo: Dialectic Multi-Robot Collaboration with Large Language Models",
+    "authors": [
+      "Zhao Mandi",
+      "Shreeya Jain",
+      "Shuran Song"
+    ],
+    "year": 2023,
+    "chunk_text": "Coordinating multiple robots requires both high-level task allocation and low-level feasibility. We assign each robot a language model agent that proposes and discusses subtask plans through dialogue, then validate the agreed plan with a motion planner, iterating when validation fails.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "roco_2023",
+    "title": "RoCo: Dialectic Multi-Robot Collaboration with Large Language Models",
+    "authors": [
+      "Zhao Mandi",
+      "Shreeya Jain",
+      "Shuran Song"
+    ],
+    "year": 2023,
+    "chunk_text": "RoCo achieves effective multi-robot coordination across collaborative manipulation tasks. Combining dialectic language reasoning with motion validation bridges high- and low-level planning. Language-based negotiation is a viable coordination mechanism for embodied multi-agent systems.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "gaia_2023",
+    "title": "GAIA: A Benchmark for General AI Assistants",
+    "authors": [
+      "Gregoire Mialon",
+      "Clementine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun"
+    ],
+    "year": 2023,
+    "chunk_text": "GAIA is a benchmark of real-world questions requiring reasoning, multimodality, web browsing, and tool use. The questions are conceptually simple for humans yet challenging for AI assistants, testing fundamental assistant capabilities.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "gaia_2023",
+    "title": "GAIA: A Benchmark for General AI Assistants",
+    "authors": [
+      "Gregoire Mialon",
+      "Clementine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun"
+    ],
+    "year": 2023,
+    "chunk_text": "Existing benchmarks saturate or test narrow skills. We propose questions that humans answer easily but that require AI assistants to combine reasoning, tool use, and multimodal understanding. The benchmark resists memorization and measures general assistant competence.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "gaia_2023",
+    "title": "GAIA: A Benchmark for General AI Assistants",
+    "authors": [
+      "Gregoire Mialon",
+      "Clementine Fourrier",
+      "Craig Swift",
+      "Thomas Wolf",
+      "Yann LeCun"
+    ],
+    "year": 2023,
+    "chunk_text": "GAIA exposes a large gap between human and AI-assistant performance despite question simplicity for humans. Tool use and multi-step reasoning remain bottlenecks. The benchmark provides a target for general-purpose assistant development.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "webarena_2023",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "authors": [
+      "Shuyan Zhou",
+      "Frank F. Xu",
+      "Hao Zhu",
+      "Xuhui Zhou",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "WebArena is a realistic, reproducible web environment with functional websites for e-commerce, forums, and collaborative development, paired with tasks that require agents to perform multi-step actions to achieve goals.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "webarena_2023",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "authors": [
+      "Shuyan Zhou",
+      "Frank F. Xu",
+      "Hao Zhu",
+      "Xuhui Zhou",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "Evaluating web agents requires realistic environments rather than simplified simulations. We build self-hosted functional websites and define long-horizon tasks with execution-based evaluation. This enables reproducible measurement of agent capabilities in web navigation and interaction.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "webarena_2023",
+    "title": "WebArena: A Realistic Web Environment for Building Autonomous Agents",
+    "authors": [
+      "Shuyan Zhou",
+      "Frank F. Xu",
+      "Hao Zhu",
+      "Xuhui Zhou",
+      "Graham Neubig"
+    ],
+    "year": 2023,
+    "chunk_text": "WebArena shows that current language model agents complete only a small fraction of realistic web tasks. Long-horizon planning and robust action execution are key gaps. The environment supports reproducible web-agent research.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "swebench_2023",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "chunk_text": "SWE-bench evaluates language models on resolving real GitHub issues by generating code patches that must pass the repository's test suite. The tasks require understanding large codebases and coordinating changes across files.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "swebench_2023",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "chunk_text": "Code generation benchmarks use isolated functions, not realistic software engineering. We collect real issue-and-pull-request pairs from popular repositories, requiring models to produce patches validated by the project's own tests. This measures practical software engineering ability.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "swebench_2023",
+    "title": "SWE-bench: Can Language Models Resolve Real-World GitHub Issues?",
+    "authors": [
+      "Carlos E. Jimenez",
+      "John Yang",
+      "Alexander Wettig",
+      "Shunyu Yao",
+      "Karthik Narasimhan"
+    ],
+    "year": 2023,
+    "chunk_text": "SWE-bench reveals that even strong models resolve only a small percentage of real issues. Repository-scale context and cross-file coordination are major challenges. The benchmark drives research on practical coding agents.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "mint_2023",
+    "title": "MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback",
+    "authors": [
+      "Xingyao Wang",
+      "Zihan Wang",
+      "Jiateng Liu",
+      "Yangyi Chen",
+      "Heng Ji"
+    ],
+    "year": 2023,
+    "chunk_text": "MINT evaluates language models on multi-turn tasks where they can use tools and receive natural-language feedback. It measures how well models leverage tool calls and incorporate user feedback across interaction turns.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "mint_2023",
+    "title": "MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback",
+    "authors": [
+      "Xingyao Wang",
+      "Zihan Wang",
+      "Jiateng Liu",
+      "Yangyi Chen",
+      "Heng Ji"
+    ],
+    "year": 2023,
+    "chunk_text": "Real assistant use involves multiple turns, tool use, and iterative feedback, but most benchmarks are single-turn. We construct tasks that allow tool interaction and simulated user feedback, measuring how performance changes as models use more turns and feedback.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "mint_2023",
+    "title": "MINT: Evaluating LLMs in Multi-turn Interaction with Tools and Language Feedback",
+    "authors": [
+      "Xingyao Wang",
+      "Zihan Wang",
+      "Jiateng Liu",
+      "Yangyi Chen",
+      "Heng Ji"
+    ],
+    "year": 2023,
+    "chunk_text": "MINT shows that models vary widely in their ability to use tools and feedback across turns, and that some improvements from feedback do not generalize. Multi-turn tool interaction is an important and under-measured capability. The benchmark guides development of interactive agents.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "plansolve_2023",
+    "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning",
+    "authors": [
+      "Lei Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Plan-and-Solve prompting first devises a plan to divide a task into subtasks, then carries out the subtasks, reducing calculation and missing-step errors in zero-shot reasoning.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "plansolve_2023",
+    "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning",
+    "authors": [
+      "Lei Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We address common error types in zero-shot chain-of-thought by explicitly prompting the model to plan before solving.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "plansolve_2023",
+    "title": "Plan-and-Solve Prompting: Improving Zero-Shot Chain-of-Thought Reasoning",
+    "authors": [
+      "Lei Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Planning before solving reduces reasoning errors without exemplars.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "art_2023",
+    "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+    "authors": [
+      "Bhargavi Paranjape",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "ART automatically selects reasoning demonstrations and interleaves tool calls during multi-step reasoning, allowing frozen LLMs to use external tools without hand-crafted prompts.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "art_2023",
+    "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+    "authors": [
+      "Bhargavi Paranjape",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We automate program-style multi-step reasoning with tool use for frozen language models.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "art_2023",
+    "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+    "authors": [
+      "Bhargavi Paranjape",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Automatic reasoning programs with tool use generalize across tasks and tools.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "cove_2023",
+    "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+    "authors": [
+      "Shehzaad Dhuliawala",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Chain-of-Verification drafts an initial response, plans verification questions, answers them independently, and produces a verified final response, reducing factual hallucination.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "cove_2023",
+    "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+    "authors": [
+      "Shehzaad Dhuliawala",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We reduce hallucination by having the model verify its own claims through independently answered checking questions.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "cove_2023",
+    "title": "Chain-of-Verification Reduces Hallucination in Large Language Models",
+    "authors": [
+      "Shehzaad Dhuliawala",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Self-verification through planned questions reduces hallucinations in generated text.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "rest_2023",
+    "title": "Reinforced Self-Training (ReST) for Language Modeling",
+    "authors": [
+      "Caglar Gulcehre",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "ReST alternates generating a dataset from the policy (Grow) and fine-tuning on filtered high-reward samples (Improve), an offline RL approach for aligning language models.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "rest_2023",
+    "title": "Reinforced Self-Training (ReST) for Language Modeling",
+    "authors": [
+      "Caglar Gulcehre",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We align language models with reward signals through an offline grow-and-improve self-training loop.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "rest_2023",
+    "title": "Reinforced Self-Training (ReST) for Language Modeling",
+    "authors": [
+      "Caglar Gulcehre",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Reinforced self-training improves quality with reduced compute relative to online RL.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "webshop_2022",
+    "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+    "authors": [
+      "Shunyu Yao",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "WebShop is a simulated e-commerce environment with millions of products where agents must navigate and purchase items from natural-language instructions, testing grounded web interaction.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "webshop_2022",
+    "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+    "authors": [
+      "Shunyu Yao",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We build a large-scale web environment to train and evaluate language agents on realistic shopping tasks.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "webshop_2022",
+    "title": "WebShop: Towards Scalable Real-World Web Interaction with Grounded Language Agents",
+    "authors": [
+      "Shunyu Yao",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Grounded web agents show progress but remain far below human performance on realistic tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "mind2web_2023",
+    "title": "Mind2Web: Towards a Generalist Agent for the Web",
+    "authors": [
+      "Xiang Deng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Mind2Web is a dataset for developing generalist web agents that follow language instructions to complete tasks across many real websites and domains.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "mind2web_2023",
+    "title": "Mind2Web: Towards a Generalist Agent for the Web",
+    "authors": [
+      "Xiang Deng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We collect diverse real-website tasks to train and evaluate generalist web-browsing agents.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "mind2web_2023",
+    "title": "Mind2Web: Towards a Generalist Agent for the Web",
+    "authors": [
+      "Xiang Deng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Generalist web agents require broad transfer across sites, domains, and interaction patterns.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "cogagent_2023",
+    "title": "CogAgent: A Visual Language Model for GUI Agents",
+    "authors": [
+      "Wenyi Hong",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "CogAgent is a vision-language model specialized for GUI understanding and navigation, recognizing screen elements and predicting actions from screenshots.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "cogagent_2023",
+    "title": "CogAgent: A Visual Language Model for GUI Agents",
+    "authors": [
+      "Wenyi Hong",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We build a visual language model that operates graphical user interfaces directly from pixels.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "cogagent_2023",
+    "title": "CogAgent: A Visual Language Model for GUI Agents",
+    "authors": [
+      "Wenyi Hong",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Screen-grounded visual agents can navigate GUIs without relying on accessibility trees.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "appagent_2023",
+    "title": "AppAgent: Multimodal Agents as Smartphone Users",
+    "authors": [
+      "Chi Zhang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "AppAgent is a multimodal agent that learns to operate smartphone applications by exploration and by observing demonstrations, acting through taps and swipes.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "appagent_2023",
+    "title": "AppAgent: Multimodal Agents as Smartphone Users",
+    "authors": [
+      "Chi Zhang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We develop a multimodal agent that uses mobile apps the way a human user would.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "appagent_2023",
+    "title": "AppAgent: Multimodal Agents as Smartphone Users",
+    "authors": [
+      "Chi Zhang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Exploration-based learning enables agents to operate unfamiliar smartphone applications.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "gitm_2023",
+    "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments",
+    "authors": [
+      "Xizhou Zhu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Ghost in the Minecraft combines LLM-based planning with structured action interfaces to achieve long-horizon goals in the open-world game Minecraft.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "gitm_2023",
+    "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments",
+    "authors": [
+      "Xizhou Zhu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We pair language-model planning with a structured action layer for open-world embodied tasks.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "gitm_2023",
+    "title": "Ghost in the Minecraft: Generally Capable Agents for Open-World Environments",
+    "authors": [
+      "Xizhou Zhu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Structured LLM planning unlocks long-horizon achievement in open-world environments.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "deps_2023",
+    "title": "Describe, Explain, Plan and Select: Interactive Planning with LLMs for Open-World Agents",
+    "authors": [
+      "Zihao Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "DEPS is an interactive planning approach where an LLM describes, explains failures, plans, and selects goals, improving long-horizon task completion for open-world agents.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "deps_2023",
+    "title": "Describe, Explain, Plan and Select: Interactive Planning with LLMs for Open-World Agents",
+    "authors": [
+      "Zihao Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We propose an interactive describe-explain-plan-select loop for robust open-world planning.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "deps_2023",
+    "title": "Describe, Explain, Plan and Select: Interactive Planning with LLMs for Open-World Agents",
+    "authors": [
+      "Zihao Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Failure-aware interactive planning improves long-horizon success rates.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "saycan_2022",
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (SayCan)",
+    "authors": [
+      "Michael Ahn",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "SayCan grounds language-model instructions in robotic affordances by combining LLM task likelihoods with learned value functions, so a robot performs feasible useful actions.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "saycan_2022",
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (SayCan)",
+    "authors": [
+      "Michael Ahn",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We ground language-model plans in what a robot can actually do via affordance value functions.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "saycan_2022",
+    "title": "Do As I Can, Not As I Say: Grounding Language in Robotic Affordances (SayCan)",
+    "authors": [
+      "Michael Ahn",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Combining language priors with affordances yields feasible real-robot behavior.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "innermono_2022",
+    "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+    "authors": [
+      "Wenlong Huang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Inner Monologue incorporates environment feedback into an LLM planning loop, letting embodied agents replan from success detection, scene description, and human feedback.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "innermono_2022",
+    "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+    "authors": [
+      "Wenlong Huang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We close the loop between language-model planning and embodied feedback.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "innermono_2022",
+    "title": "Inner Monologue: Embodied Reasoning through Planning with Language Models",
+    "authors": [
+      "Wenlong Huang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Feedback-grounded inner monologue improves embodied task completion.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "codeaspolicies_2022",
+    "title": "Code as Policies: Language Model Programs for Embodied Control",
+    "authors": [
+      "Jacky Liang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Code as Policies uses LLMs to write executable robot policy code from language commands, composing perception and control APIs into runnable programs.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "codeaspolicies_2022",
+    "title": "Code as Policies: Language Model Programs for Embodied Control",
+    "authors": [
+      "Jacky Liang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We treat robot control as program synthesis driven by language models.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "codeaspolicies_2022",
+    "title": "Code as Policies: Language Model Programs for Embodied Control",
+    "authors": [
+      "Jacky Liang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Language-model-generated policy code generalizes to new instructions and objects.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "lats_2023",
+    "title": "Language Agent Tree Search Unifies Reasoning, Acting, and Planning",
+    "authors": [
+      "Andy Zhou",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "LATS uses Monte Carlo tree search over language-agent actions with environment feedback and self-reflection, unifying reasoning, acting, and planning.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "lats_2023",
+    "title": "Language Agent Tree Search Unifies Reasoning, Acting, and Planning",
+    "authors": [
+      "Andy Zhou",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We bring principled search to language agents via Monte Carlo tree search with reflection.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "lats_2023",
+    "title": "Language Agent Tree Search Unifies Reasoning, Acting, and Planning",
+    "authors": [
+      "Andy Zhou",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Search over agent actions improves decision-making on reasoning and tool-use tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "rap_2023",
+    "title": "Reasoning with Language Model is Planning with World Model (RAP)",
+    "authors": [
+      "Shibo Hao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "RAP repurposes an LLM as both a reasoning agent and a world model, using Monte Carlo tree search to plan over predicted states for multi-step reasoning.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "rap_2023",
+    "title": "Reasoning with Language Model is Planning with World Model (RAP)",
+    "authors": [
+      "Shibo Hao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We cast reasoning as planning by treating the language model as a world model.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "rap_2023",
+    "title": "Reasoning with Language Model is Planning with World Model (RAP)",
+    "authors": [
+      "Shibo Hao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Planning with an LLM world model improves multi-step reasoning.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "adapt_2023",
+    "title": "ADaPT: As-Needed Decomposition and Planning with Language Models",
+    "authors": [
+      "Archiki Prasad",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "ADaPT recursively decomposes tasks only when the executor fails, adapting plan granularity to task and model capability for interactive decision-making.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "adapt_2023",
+    "title": "ADaPT: As-Needed Decomposition and Planning with Language Models",
+    "authors": [
+      "Archiki Prasad",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We decompose tasks as needed rather than all at once, adapting to failures.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "adapt_2023",
+    "title": "ADaPT: As-Needed Decomposition and Planning with Language Models",
+    "authors": [
+      "Archiki Prasad",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "As-needed recursive decomposition improves success on complex interactive tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "agenttuning_2023",
+    "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+    "authors": [
+      "Aohan Zeng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "AgentTuning instruction-tunes open LLMs on a mixture of agent trajectories and general instructions, improving agent abilities without sacrificing general capability.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "agenttuning_2023",
+    "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+    "authors": [
+      "Aohan Zeng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We fine-tune open models on agent interaction data to build generalist agents.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "agenttuning_2023",
+    "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+    "authors": [
+      "Aohan Zeng",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Mixed agent and general tuning yields broad agent skills while preserving general ability.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "lemur_2023",
+    "title": "Lemur: Harmonizing Natural Language and Code for Language Agents",
+    "authors": [
+      "Yiheng Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Lemur is an open model pretrained and instruction-tuned to balance language and coding ability, targeting the needs of language agents that act in environments.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "lemur_2023",
+    "title": "Lemur: Harmonizing Natural Language and Code for Language Agents",
+    "authors": [
+      "Yiheng Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We build open models that harmonize natural language and code for agentic use.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "lemur_2023",
+    "title": "Lemur: Harmonizing Natural Language and Code for Language Agents",
+    "authors": [
+      "Yiheng Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Balanced language-code ability improves agent performance across environments.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "ircot_2023",
+    "title": "Interleaving Retrieval with Chain-of-Thought Reasoning for Multi-Step Questions (IRCoT)",
+    "authors": [
+      "Harsh Trivedi",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "IRCoT interleaves retrieval with chain-of-thought, using each reasoning step to guide what to retrieve next, improving multi-hop question answering.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "ircot_2023",
+    "title": "Interleaving Retrieval with Chain-of-Thought Reasoning for Multi-Step Questions (IRCoT)",
+    "authors": [
+      "Harsh Trivedi",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We couple retrieval and reasoning so each guides the other for multi-hop QA.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "ircot_2023",
+    "title": "Interleaving Retrieval with Chain-of-Thought Reasoning for Multi-Step Questions (IRCoT)",
+    "authors": [
+      "Harsh Trivedi",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Interleaving retrieval with reasoning outperforms one-shot retrieval on multi-hop questions.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "dsp_2022",
+    "title": "Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive NLP",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "DSP is a framework that composes retrieval models and language models through programs that demonstrate, search, and predict, for knowledge-intensive tasks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "dsp_2022",
+    "title": "Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive NLP",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We compose retrievers and language models with a programming abstraction for knowledge tasks.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "dsp_2022",
+    "title": "Demonstrate-Search-Predict: Composing Retrieval and Language Models for Knowledge-Intensive NLP",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Program-level composition of retrieval and generation improves knowledge-intensive QA.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "dspy_2023",
+    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "DSPy expresses LLM pipelines as declarative modules and compiles them by optimizing prompts and demonstrations, replacing brittle hand-crafted prompting.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "dspy_2023",
+    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We treat LLM pipelines as programs that can be optimized and compiled.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "dspy_2023",
+    "title": "DSPy: Compiling Declarative Language Model Calls into Self-Improving Pipelines",
+    "authors": [
+      "Omar Khattab",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Declarative, compilable pipelines outperform hand-tuned prompting.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "chainofnote_2023",
+    "title": "Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Chain-of-Note generates sequential reading notes for retrieved documents to assess relevance before answering, improving robustness to noisy or irrelevant retrieval.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "chainofnote_2023",
+    "title": "Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We add a note-taking step over retrieved documents to improve RAG robustness.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "chainofnote_2023",
+    "title": "Chain-of-Note: Enhancing Robustness in Retrieval-Augmented Language Models",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Reading notes improve robustness to irrelevant or noisy retrieved passages.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "recomp_2023",
+    "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+    "authors": [
+      "Fangyuan Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "RECOMP compresses retrieved documents into concise summaries before in-context augmentation, reducing cost and filtering irrelevant content.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "recomp_2023",
+    "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+    "authors": [
+      "Fangyuan Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We compress retrieved evidence into summaries to make RAG cheaper and more focused.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "recomp_2023",
+    "title": "RECOMP: Improving Retrieval-Augmented LMs with Compression and Selective Augmentation",
+    "authors": [
+      "Fangyuan Xu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Compressing retrieved context improves efficiency without harming task performance.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "query2doc_2023",
+    "title": "Query2doc: Query Expansion with Large Language Models",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Query2doc expands a query by prompting an LLM to generate a pseudo-document, which improves both sparse and dense retrieval.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "query2doc_2023",
+    "title": "Query2doc: Query Expansion with Large Language Models",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We expand queries with LLM-generated pseudo-documents to improve retrieval.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "query2doc_2023",
+    "title": "Query2doc: Query Expansion with Large Language Models",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "LLM-based query expansion consistently improves retrieval effectiveness.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "genread_2022",
+    "title": "Generate rather than Retrieve: Large Language Models are Strong Context Generators",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "GenRead prompts an LLM to generate contextual documents and reads them to answer, sometimes matching or surpassing retrieve-then-read pipelines.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "genread_2022",
+    "title": "Generate rather than Retrieve: Large Language Models are Strong Context Generators",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We replace retrieval with model-generated context for knowledge-intensive QA.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "genread_2022",
+    "title": "Generate rather than Retrieve: Large Language Models are Strong Context Generators",
+    "authors": [
+      "Wenhao Yu",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Generated context can rival retrieved context for some knowledge tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "raptor_2024",
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "authors": [
+      "Parth Sarthi",
+      "et al."
+    ],
+    "year": 2024,
+    "chunk_text": "RAPTOR builds a hierarchical tree of recursively summarized text chunks, enabling retrieval at multiple levels of abstraction for long-document QA.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "raptor_2024",
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "authors": [
+      "Parth Sarthi",
+      "et al."
+    ],
+    "year": 2024,
+    "chunk_text": "We organize a corpus as a recursive summary tree for multi-scale retrieval.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "raptor_2024",
+    "title": "RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval",
+    "authors": [
+      "Parth Sarthi",
+      "et al."
+    ],
+    "year": 2024,
+    "chunk_text": "Tree-organized abstractive retrieval improves long-context question answering.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "lostmiddle_2023",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Nelson F. Liu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "This study shows language models use information best at the beginning and end of long contexts and degrade when relevant content is in the middle, with implications for retrieval order.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "lostmiddle_2023",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Nelson F. Liu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We analyze how position within long contexts affects language-model performance.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "lostmiddle_2023",
+    "title": "Lost in the Middle: How Language Models Use Long Contexts",
+    "authors": [
+      "Nelson F. Liu",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Position strongly affects long-context use, motivating careful ordering of retrieved evidence.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "knnlm_2020",
+    "title": "Generalization through Memorization: Nearest Neighbor Language Models (kNN-LM)",
+    "authors": [
+      "Urvashi Khandelwal",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "kNN-LM interpolates a language model with a nearest-neighbor retrieval over a datastore of cached representations, improving perplexity without further training.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "knnlm_2020",
+    "title": "Generalization through Memorization: Nearest Neighbor Language Models (kNN-LM)",
+    "authors": [
+      "Urvashi Khandelwal",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "We augment language modeling with explicit nearest-neighbor retrieval over stored examples.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "knnlm_2020",
+    "title": "Generalization through Memorization: Nearest Neighbor Language Models (kNN-LM)",
+    "authors": [
+      "Urvashi Khandelwal",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "Retrieval over a datastore improves language modeling, especially for rare patterns.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "promptagator_2022",
+    "title": "Promptagator: Few-Shot Dense Retrieval from 8 Examples",
+    "authors": [
+      "Zhuyun Dai",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Promptagator generates synthetic queries from a few examples using a large LM to train task-specific dense retrievers with minimal supervision.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "promptagator_2022",
+    "title": "Promptagator: Few-Shot Dense Retrieval from 8 Examples",
+    "authors": [
+      "Zhuyun Dai",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We bootstrap task-specific dense retrievers from only a handful of examples.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "promptagator_2022",
+    "title": "Promptagator: Few-Shot Dense Retrieval from 8 Examples",
+    "authors": [
+      "Zhuyun Dai",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Few-shot synthetic query generation yields strong task-specific retrievers.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "colbert_2020",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "authors": [
+      "Omar Khattab",
+      "Matei Zaharia"
+    ],
+    "year": 2020,
+    "chunk_text": "ColBERT introduces late interaction, encoding queries and documents into token-level embeddings and scoring via efficient maximum-similarity, balancing effectiveness and efficiency.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "colbert_2020",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "authors": [
+      "Omar Khattab",
+      "Matei Zaharia"
+    ],
+    "year": 2020,
+    "chunk_text": "We propose late interaction to retain fine-grained matching while remaining scalable.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "colbert_2020",
+    "title": "ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT",
+    "authors": [
+      "Omar Khattab",
+      "Matei Zaharia"
+    ],
+    "year": 2020,
+    "chunk_text": "Late interaction delivers strong retrieval quality at practical efficiency.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "colbertv2_2022",
+    "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+    "authors": [
+      "Keshav Santhanam",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "ColBERTv2 improves late-interaction retrieval with residual compression and denoised supervision, reducing storage while improving quality.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "colbertv2_2022",
+    "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+    "authors": [
+      "Keshav Santhanam",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We make late-interaction retrieval more accurate and far more storage-efficient.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "colbertv2_2022",
+    "title": "ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction",
+    "authors": [
+      "Keshav Santhanam",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Compression and better supervision improve both quality and footprint.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "splade_2021",
+    "title": "SPLADE: Sparse Lexical and Expansion Model for First-Stage Ranking",
+    "authors": [
+      "Thibault Formal",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "SPLADE learns sparse lexical representations with term expansion via masked language modeling, combining inverted-index efficiency with learned semantics.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "splade_2021",
+    "title": "SPLADE: Sparse Lexical and Expansion Model for First-Stage Ranking",
+    "authors": [
+      "Thibault Formal",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "We learn sparse, expansion-aware representations for efficient first-stage retrieval.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "splade_2021",
+    "title": "SPLADE: Sparse Lexical and Expansion Model for First-Stage Ranking",
+    "authors": [
+      "Thibault Formal",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "Learned sparse retrieval is competitive with dense methods while staying index-friendly.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "contriever_2021",
+    "title": "Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)",
+    "authors": [
+      "Gautier Izacard",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "Contriever trains dense retrievers with contrastive learning on unlabeled text, achieving strong zero-shot and transfer retrieval without supervised query-document pairs.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "contriever_2021",
+    "title": "Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)",
+    "authors": [
+      "Gautier Izacard",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "We learn dense retrievers without labeled data using contrastive pretraining.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "contriever_2021",
+    "title": "Unsupervised Dense Information Retrieval with Contrastive Learning (Contriever)",
+    "authors": [
+      "Gautier Izacard",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "Unsupervised contrastive training yields strong transferable dense retrievers.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "gtr_2021",
+    "title": "Large Dual Encoders Are Generalizable Retrievers (GTR)",
+    "authors": [
+      "Jianmo Ni",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "GTR shows that scaling dual-encoder retrievers improves out-of-domain generalization, with a single model transferring across diverse retrieval tasks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "gtr_2021",
+    "title": "Large Dual Encoders Are Generalizable Retrievers (GTR)",
+    "authors": [
+      "Jianmo Ni",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "We study how scaling dual encoders affects retrieval generalization.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "gtr_2021",
+    "title": "Large Dual Encoders Are Generalizable Retrievers (GTR)",
+    "authors": [
+      "Jianmo Ni",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "Scaling dual-encoder retrievers improves out-of-domain transfer.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "e5_2022",
+    "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5)",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "E5 trains general-purpose text embeddings via weakly-supervised contrastive pretraining on curated text pairs, performing well across retrieval and embedding benchmarks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "e5_2022",
+    "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5)",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We pretrain general text embeddings from large weakly-supervised pair collections.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "e5_2022",
+    "title": "Text Embeddings by Weakly-Supervised Contrastive Pre-training (E5)",
+    "authors": [
+      "Liang Wang",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "Weakly-supervised contrastive embeddings generalize across many tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "bge_2023",
+    "title": "C-Pack: Packed Resources for General Chinese and Multilingual Text Embeddings (BGE)",
+    "authors": [
+      "Shitao Xiao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "BGE / C-Pack provides training data, models, and recipes for general text embeddings, achieving strong results on embedding and retrieval benchmarks.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "bge_2023",
+    "title": "C-Pack: Packed Resources for General Chinese and Multilingual Text Embeddings (BGE)",
+    "authors": [
+      "Shitao Xiao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We release packed resources and recipes for training strong general text embeddings.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "bge_2023",
+    "title": "C-Pack: Packed Resources for General Chinese and Multilingual Text Embeddings (BGE)",
+    "authors": [
+      "Shitao Xiao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Open embedding resources enable competitive general-purpose retrieval models.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "sbert_2019",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "authors": [
+      "Nils Reimers",
+      "Iryna Gurevych"
+    ],
+    "year": 2019,
+    "chunk_text": "Sentence-BERT fine-tunes BERT in a siamese structure to produce semantically meaningful sentence embeddings comparable with cosine similarity, enabling efficient semantic search.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "sbert_2019",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "authors": [
+      "Nils Reimers",
+      "Iryna Gurevych"
+    ],
+    "year": 2019,
+    "chunk_text": "We produce fixed-size sentence embeddings suitable for fast semantic similarity.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "sbert_2019",
+    "title": "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks",
+    "authors": [
+      "Nils Reimers",
+      "Iryna Gurevych"
+    ],
+    "year": 2019,
+    "chunk_text": "Siamese fine-tuning yields embeddings well-suited to retrieval and clustering.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "mteb_2022",
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "authors": [
+      "Niklas Muennighoff",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "MTEB is a benchmark spanning many embedding tasks and datasets, providing a standardized comparison of text embedding models across retrieval, clustering, and classification.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "mteb_2022",
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "authors": [
+      "Niklas Muennighoff",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "We standardize evaluation of text embeddings across a broad set of tasks.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "mteb_2022",
+    "title": "MTEB: Massive Text Embedding Benchmark",
+    "authors": [
+      "Niklas Muennighoff",
+      "et al."
+    ],
+    "year": 2022,
+    "chunk_text": "A unified embedding benchmark reveals that no single model dominates all tasks.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "beir_2021",
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-Shot Evaluation of Information Retrieval Models",
+    "authors": [
+      "Nandan Thakur",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "BEIR is a heterogeneous zero-shot retrieval benchmark across diverse domains and tasks, used to evaluate the generalization of retrieval models.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "beir_2021",
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-Shot Evaluation of Information Retrieval Models",
+    "authors": [
+      "Nandan Thakur",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "We assemble a diverse zero-shot benchmark to test retrieval generalization.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "beir_2021",
+    "title": "BEIR: A Heterogeneous Benchmark for Zero-Shot Evaluation of Information Retrieval Models",
+    "authors": [
+      "Nandan Thakur",
+      "et al."
+    ],
+    "year": 2021,
+    "chunk_text": "Zero-shot evaluation across domains exposes large gaps between retrieval methods.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "msmarco_2016",
+    "title": "MS MARCO: A Human Generated Machine Reading Comprehension Dataset",
+    "authors": [
+      "Tri Nguyen",
+      "et al."
+    ],
+    "year": 2016,
+    "chunk_text": "MS MARCO is a large-scale dataset of real user queries with human-generated answers and passage relevance, widely used to train and evaluate retrieval and ranking models.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "msmarco_2016",
+    "title": "MS MARCO: A Human Generated Machine Reading Comprehension Dataset",
+    "authors": [
+      "Tri Nguyen",
+      "et al."
+    ],
+    "year": 2016,
+    "chunk_text": "We release a large dataset of real queries and passages for reading and ranking.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "msmarco_2016",
+    "title": "MS MARCO: A Human Generated Machine Reading Comprehension Dataset",
+    "authors": [
+      "Tri Nguyen",
+      "et al."
+    ],
+    "year": 2016,
+    "chunk_text": "Large-scale real-query data enables training of modern neural retrievers and rankers.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "monot5_2020",
+    "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model (monoT5)",
+    "authors": [
+      "Rodrigo Nogueira",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "monoT5 reranks passages by framing relevance as a sequence-to-sequence task, fine-tuning T5 to output a relevance token, a strong and simple neural reranker.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "monot5_2020",
+    "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model (monoT5)",
+    "authors": [
+      "Rodrigo Nogueira",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "We cast passage reranking as a text-to-text relevance prediction with a pretrained encoder-decoder.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "monot5_2020",
+    "title": "Document Ranking with a Pretrained Sequence-to-Sequence Model (monoT5)",
+    "authors": [
+      "Rodrigo Nogueira",
+      "et al."
+    ],
+    "year": 2020,
+    "chunk_text": "Sequence-to-sequence reranking is a simple, strong baseline for neural ranking.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "rankgpt_2023",
+    "title": "Is ChatGPT Good at Search? Investigating LLMs as Re-Ranking Agents (RankGPT)",
+    "authors": [
+      "Weiwei Sun",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "RankGPT studies using LLMs as zero-shot listwise rerankers via permutation generation and distills their ability into smaller specialized rerankers.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "rankgpt_2023",
+    "title": "Is ChatGPT Good at Search? Investigating LLMs as Re-Ranking Agents (RankGPT)",
+    "authors": [
+      "Weiwei Sun",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We investigate large language models as zero-shot listwise passage rerankers.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "rankgpt_2023",
+    "title": "Is ChatGPT Good at Search? Investigating LLMs as Re-Ranking Agents (RankGPT)",
+    "authors": [
+      "Weiwei Sun",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "LLMs are strong zero-shot rerankers and can be distilled into efficient models.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "hotpotqa_2018",
+    "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+    "authors": [
+      "Zhilin Yang",
+      "et al."
+    ],
+    "year": 2018,
+    "chunk_text": "HotpotQA provides multi-hop questions requiring reasoning over multiple supporting documents, with sentence-level supporting facts for explainability, widely used to test multi-hop retrieval.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "hotpotqa_2018",
+    "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+    "authors": [
+      "Zhilin Yang",
+      "et al."
+    ],
+    "year": 2018,
+    "chunk_text": "We introduce a dataset requiring reasoning across multiple documents with supporting-fact supervision.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "hotpotqa_2018",
+    "title": "HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question Answering",
+    "authors": [
+      "Zhilin Yang",
+      "et al."
+    ],
+    "year": 2018,
+    "chunk_text": "Multi-hop QA with supporting facts drives research on retrieval-and-reasoning systems.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "rarr_2023",
+    "title": "RARR: Researching and Revising What Language Models Say, Using Retrieval",
+    "authors": [
+      "Luyu Gao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "RARR attributes and revises language-model outputs after generation by retrieving evidence and editing unsupported claims, improving attribution without retraining.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "rarr_2023",
+    "title": "RARR: Researching and Revising What Language Models Say, Using Retrieval",
+    "authors": [
+      "Luyu Gao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We post-hoc attribute and revise model outputs using retrieved evidence.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "rarr_2023",
+    "title": "RARR: Researching and Revising What Language Models Say, Using Retrieval",
+    "authors": [
+      "Luyu Gao",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Retrieval-based post-editing improves factual attribution of generated text.",
+    "chunk_type": "conclusion"
+  },
+  {
+    "paper_id": "activerag_2023",
+    "title": "Active Retrieval Augmented Generation for Knowledge-Intensive Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "This work triggers retrieval actively during generation whenever the model is uncertain, anticipating future content to decide what to retrieve next for long-form generation.",
+    "chunk_type": "abstract"
+  },
+  {
+    "paper_id": "activerag_2023",
+    "title": "Active Retrieval Augmented Generation for Knowledge-Intensive Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "We retrieve actively and on-demand during generation rather than only once up front.",
+    "chunk_type": "introduction"
+  },
+  {
+    "paper_id": "activerag_2023",
+    "title": "Active Retrieval Augmented Generation for Knowledge-Intensive Generation",
+    "authors": [
+      "Zhengbao Jiang",
+      "et al."
+    ],
+    "year": 2023,
+    "chunk_text": "Uncertainty-triggered active retrieval improves long-form knowledge-intensive generation.",
+    "chunk_type": "conclusion"
   }
 ]

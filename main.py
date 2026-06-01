@@ -69,6 +69,7 @@ def main() -> None:
     parser.add_argument("--query",         type=str,            help="Research comparison query")
     parser.add_argument("--top-k",         type=int, default=15, help="Candidate papers to retrieve (default: 15)")
     parser.add_argument("--top-n",         type=int, default=5,  help="Papers to analyze after ranking (default: 5)")
+    parser.add_argument("--model",         type=str, default="gpt-4o", help="LLM model (default: gpt-4o)")
     parser.add_argument("--output",        type=str,            help="Save JSON report to this path")
     parser.add_argument("--eval-bundle",   type=str,            help="Export human eval bundle to this path")
     args = parser.parse_args()
@@ -82,9 +83,10 @@ def main() -> None:
     query = args.query or "Compare recent multi-agent LLM frameworks for collaborative reasoning"
 
     agent = NoveltyAwareResearchAgent(
-        corpus_path    = args.corpus_path,
-        openai_api_key = os.getenv("OPENAI_API_KEY"),
-    )
+            corpus_path    = args.corpus_path,
+            openai_api_key = os.getenv("OPENAI_API_KEY"),
+            model          = args.model,
+        )
 
     report, metadata = agent.run(
         query          = query,

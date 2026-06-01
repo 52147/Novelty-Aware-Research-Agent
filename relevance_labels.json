@@ -10,18 +10,24 @@
     "run_01.json": {
       "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
       "retrieved_top5_in_rank_order": [
-        "metagpt_2023",
         "agentverse_2023",
         "autogen_2023",
         "agentsurvey_2023",
-        "agentbench_2023"
+        "agentbench_2023",
+        "openagents_2023"
       ],
       "relevance": {
-        "metagpt_2023": 0,
-        "agentverse_2023": 0,
-        "autogen_2023": 0,
-        "agentsurvey_2023": 0,
-        "agentbench_2023": 0
+        "agentverse_2023": 3,
+        "autogen_2023": 3,
+        "agentsurvey_2023": 2,
+        "agentbench_2023": 1,
+        "openagents_2023": 1,
+        "metagpt_2023": 3,
+        "camel_2023": 3,
+        "chatdev_2023": 2,
+        "multidebate_2023": 2,
+        "metaagents_2023": 2,
+        "roco_2023": 1
       }
     },
     "run_02.json": {
@@ -29,16 +35,21 @@
       "retrieved_top5_in_rank_order": [
         "agentbench_2023",
         "agentsurvey_2023",
+        "art_2023",
         "cot_2022",
-        "react_2022",
-        "rewoo_2023"
+        "rap_2023"
       ],
       "relevance": {
-        "agentbench_2023": 0,
-        "agentsurvey_2023": 0,
-        "cot_2022": 0,
-        "react_2022": 0,
-        "rewoo_2023": 0
+        "agentbench_2023": 3,
+        "agentsurvey_2023": 2,
+        "art_2023": 1,
+        "cot_2022": 1,
+        "rap_2023": 1,
+        "mint_2023": 3,
+        "gaia_2023": 3,
+        "webarena_2023": 2,
+        "swebench_2023": 2,
+        "toolbench_2023": 2
       }
     },
     "run_03.json": {
@@ -46,16 +57,19 @@
       "retrieved_top5_in_rank_order": [
         "reflexion_2023",
         "camel_2023",
-        "metaagents_2023",
         "agentverse_2023",
-        "generativeagents_2023"
+        "generativeagents_2023",
+        "innermono_2022"
       ],
       "relevance": {
-        "reflexion_2023": 0,
-        "camel_2023": 0,
-        "metaagents_2023": 0,
-        "agentverse_2023": 0,
-        "generativeagents_2023": 0
+        "reflexion_2023": 3,
+        "camel_2023": 3,
+        "agentverse_2023": 2,
+        "generativeagents_2023": 2,
+        "innermono_2022": 1,
+        "expel_2023": 2,
+        "chatdev_2023": 1,
+        "metaagents_2023": 1
       }
     }
   },

@@ -60,7 +60,7 @@ For each query, the system returns:
 
 ---
 
-## 📈 Experimental Results (20-paper corpus)
+## 📈 Experimental Results (100-paper corpus)
 
 | Metric | Run 1 | Run 2 | Run 3 | Avg |
 |---|---|---|---|---|
@@ -75,7 +75,7 @@ For each query, the system returns:
 
 ## ⚠️ Important Notes
 
-- The corpus contains **20 papers** in the agentic AI domain (multi-agent frameworks, reasoning techniques, tool-use systems, evaluation/survey work)
+- The corpus contains **100 papers** in the agentic AI domain (multi-agent frameworks, reasoning techniques, tool-use systems, evaluation/survey work)
 - Each query takes **~35 seconds** — the structured pipeline is slower than a basic summarization call by design
 - Gap findings are **corpus-level observations only** — not claims about the broader research literature
 - Your API key is used solely for OpenAI inference and never stored server-side

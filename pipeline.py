@@ -41,12 +41,13 @@ class NoveltyAwareResearchAgent:
         self,
         corpus_path:    str = "corpus",
         openai_api_key: Optional[str] = None,
+        model:          str = "gpt-4o",
     ):
         print("="*60)
         print("  Novelty-Aware Research Agent — initializing")
         print("="*60)
 
-        self.llm    = LLMClient(api_key=openai_api_key)
+        self.llm    = LLMClient(api_key=openai_api_key, model=model)
         self.corpus = CorpusBuilder()
         self.corpus.load_index(corpus_path)
 
@@ -71,7 +72,7 @@ class NoveltyAwareResearchAgent:
         """Run all six pipeline stages and return (report, metadata)."""
 
         t0   = time.time()
-        meta: dict = {"query": query, "stages": {}}
+        meta: dict = {"query": query, "model": self.llm.model, "stages": {}}
 
         # ── 1. Query Analyzer ─────────────────────────────────────────────────
         print(f"\n{'─'*55}")

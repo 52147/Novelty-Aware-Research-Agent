@@ -44,3 +44,9 @@ webapp/1778193480638_pipeline.py
 # Logs
 *.log
 uvicorn.log
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/

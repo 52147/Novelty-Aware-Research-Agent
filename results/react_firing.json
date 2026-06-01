@@ -9,17 +9,17 @@
     },
     {
       "query": "chunked cross-attention retrieval from trillion-",
-      "iter1": 8,
+      "iter1": 12,
       "refine": "no",
       "iters": 1,
-      "final": 8
+      "final": 12
     },
     {
       "query": "zero-ablation component attribution in transform",
-      "iter1": 9,
+      "iter1": 12,
       "refine": "no",
       "iters": 1,
-      "final": 9
+      "final": 12
     },
     {
       "query": "operating-system style paged memory for unbounde",
@@ -39,17 +39,17 @@
   "strict (L2<1)": [
     {
       "query": "verbal self-reflection memory for single-agent c",
-      "iter1": 2,
-      "refine": "YES",
-      "iters": 2,
-      "final": 4
-    },
-    {
-      "query": "chunked cross-attention retrieval from trillion-",
       "iter1": 3,
       "refine": "no",
       "iters": 1,
       "final": 3
+    },
+    {
+      "query": "chunked cross-attention retrieval from trillion-",
+      "iter1": 6,
+      "refine": "no",
+      "iters": 1,
+      "final": 6
     },
     {
       "query": "zero-ablation component attribution in transform",
@@ -62,8 +62,8 @@
       "query": "operating-system style paged memory for unbounde",
       "iter1": 1,
       "refine": "YES",
-      "iters": 3,
-      "final": 5
+      "iters": 2,
+      "final": 6
     },
     {
       "query": "dialectic multi-robot motion-validated collabora",

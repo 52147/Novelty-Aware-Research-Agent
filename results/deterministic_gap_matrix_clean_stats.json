@@ -5,10 +5,10 @@
     "results/run_03.json"
   ],
   "unique_papers": 12,
-  "problem_categories": 8,
-  "method_categories": 12,
-  "total_cells": 96,
-  "filled_cells": 12,
-  "empty_cells_corpus_level_gaps": 84,
-  "matrix_density": 0.125
+  "problem_categories": 7,
+  "method_categories": 10,
+  "total_cells": 70,
+  "filled_cells": 10,
+  "empty_cells_corpus_level_gaps": 60,
+  "matrix_density": 0.14285714285714285
 }

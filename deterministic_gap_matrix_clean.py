@@ -24,6 +24,22 @@ OUT_MD = "results/deterministic_gap_matrix_clean.md"
 OUT_JSON = "results/deterministic_gap_matrix_clean_stats.json"
 
 PAPER_LABELS = {
+    "openagents_2023": {
+        "problem": "Agent evaluation",
+        "method": "Benchmarking",
+    },
+    "art_2023": {
+        "problem": "Reasoning-action interaction",
+        "method": "Decoupled reasoning from observation",
+    },
+    "rap_2023": {
+        "problem": "Agent reasoning",
+        "method": "Reasoning prompting",
+    },
+    "innermono_2022": {
+        "problem": "Reasoning-action interaction",
+        "method": "ReAct reasoning-action loop",
+    },
     "metagpt_2023": {
         "problem": "Multi-agent coordination",
         "method": "Role-based multi-agent framework",

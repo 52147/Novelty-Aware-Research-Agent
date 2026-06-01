@@ -1,0 +1,193 @@
+{
+  "report": {
+    "query": "What evaluation methods exist for LLM reasoning agents?",
+    "papers_analyzed": 5,
+    "per_paper_summaries": [
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "year": 2023,
+        "one_sentence_summary": "AgentBench provides a comprehensive benchmark to evaluate the performance of LLMs as autonomous agents across various environments."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents",
+        "year": 2023,
+        "one_sentence_summary": "This survey offers a unified framework for understanding LLM-based autonomous agents and highlights key challenges in the field."
+      },
+      {
+        "paper_id": "art_2023",
+        "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+        "year": 2023,
+        "one_sentence_summary": "ART introduces a method for enabling frozen LLMs to perform multi-step reasoning and use external tools automatically."
+      },
+      {
+        "paper_id": "agenttuning_2023",
+        "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs",
+        "year": 2023,
+        "one_sentence_summary": "AgentTuning applies instruction-tuning to LLMs with a mix of agent interaction data to enhance agent abilities while preserving general skills."
+      },
+      {
+        "paper_id": "rap_2023",
+        "title": "Reasoning with Language Model is Planning with World Model (RAP)",
+        "year": 2023,
+        "one_sentence_summary": "RAP demonstrates how using a language model as a world model can enhance multi-step reasoning through planning."
+      }
+    ],
+    "overlaps": [
+      {
+        "paper_ids": [
+          "agentbench_2023",
+          "agentsurvey_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers address the lack of standardized evaluation and frameworks for LLM-based autonomous agents."
+      },
+      {
+        "paper_ids": [
+          "art_2023",
+          "rap_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers focus on improving multi-step reasoning capabilities in language models."
+      },
+      {
+        "paper_ids": [
+          "agentbench_2023",
+          "art_2023"
+        ],
+        "shared_element": "novelty",
+        "description": "Both papers emphasize the novelty of addressing multi-step reasoning and tool use in LLMs."
+      }
+    ],
+    "differences": [
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents (2023)",
+        "differentiating_aspect": "Scope and Evaluation Approach",
+        "description": "AgentBench introduces a comprehensive benchmark specifically designed to evaluate LLMs as autonomous agents across multiple environments, focusing on integrated agent behavior rather than isolated capabilities."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents (2023)",
+        "differentiating_aspect": "Scope and Contribution",
+        "description": "This paper provides a unified conceptual framework for understanding LLM-based autonomous agents and identifies key open challenges, offering a broad overview rather than a specific methodological contribution."
+      },
+      {
+        "paper_id": "art_2023",
+        "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models (2023)",
+        "differentiating_aspect": "Method",
+        "description": "ART introduces a novel method for enabling frozen LLMs to perform multi-step reasoning and use external tools automatically, without hand-crafted prompts, which is a unique approach to enhancing LLM capabilities."
+      },
+      {
+        "paper_id": "agenttuning_2023",
+        "title": "AgentTuning: Enabling Generalized Agent Abilities for LLMs (2023)",
+        "differentiating_aspect": "Method and Contribution",
+        "description": "AgentTuning focuses on instruction-tuning LLMs using a mixture of agent trajectories and general instructions to enhance agent abilities while preserving general capabilities, offering a unique tuning approach."
+      },
+      {
+        "paper_id": "rap_2023",
+        "title": "Reasoning with Language Model is Planning with World Model (RAP) (2023)",
+        "differentiating_aspect": "Method and Novelty",
+        "description": "RAP repurposes a language model as both a reasoning agent and a world model, using Monte Carlo tree search for planning, which is a novel integration of reasoning and planning in LLMs."
+      }
+    ],
+    "gaps": [
+      {
+        "problem_formulation": "Lack of standardized evaluation for LLM-based agents",
+        "missing_method": "Instruction-tuning",
+        "description": "While the problem of lacking standardized evaluation for LLM-based agents is addressed by developing benchmarks like AgentBench, there is no mention of using instruction-tuning as a method to improve or standardize evaluations.",
+        "supporting_evidence": "AgentBench uses a comprehensive benchmark approach, but instruction-tuning is only mentioned in the context of improving agent abilities, not evaluation."
+      },
+      {
+        "problem_formulation": "Enabling frozen LLMs to perform multi-step reasoning and use external tools",
+        "missing_method": "Benchmarking",
+        "description": "The ART method addresses the problem of enabling frozen LLMs to perform multi-step reasoning and use external tools, but it does not involve benchmarking these capabilities against standardized tasks or environments.",
+        "supporting_evidence": "ART focuses on automating reasoning and tool use without hand-crafted prompts, but does not mention benchmarking these capabilities."
+      },
+      {
+        "problem_formulation": "Improving multi-step reasoning using language models",
+        "missing_method": "Survey",
+        "description": "The problem of improving multi-step reasoning using language models is tackled through methods like RAP, but there is no survey that consolidates existing approaches and identifies gaps in this specific area.",
+        "supporting_evidence": "RAP uses a novel method involving language models as world models, but there is no survey mentioned that reviews multi-step reasoning improvements specifically."
+      },
+      {
+        "problem_formulation": "Improving agent abilities in LLMs without sacrificing general capabilities",
+        "missing_method": "Benchmarking",
+        "description": "AgentTuning improves agent abilities without sacrificing general capabilities through instruction-tuning, but does not benchmark these improvements in a standardized manner.",
+        "supporting_evidence": "AgentTuning uses instruction-tuning to balance agent and general capabilities, but lacks a benchmarking approach to evaluate these improvements."
+      }
+    ],
+    "synthesis": "The collection of papers reveals significant efforts to develop evaluation methods for large language model (LLM) reasoning agents, with a focus on improving multi-step reasoning and tool use. AgentBench (2023) and the survey by Wang et al. (2023) both address the lack of standardized evaluation frameworks, though from different perspectives\u2014one through benchmarking and the other through conceptual synthesis. Methods like ART (2023) and RAP (2023) focus on advancing reasoning capabilities, while AgentTuning (2023) explores instruction-tuning to maintain general agent abilities. However, gaps remain in integrating benchmarking with instruction-tuning and consolidating multi-step reasoning improvements through comprehensive surveys. These gaps highlight opportunities for further research in standardized evaluation and the systematic integration of advanced reasoning techniques.",
+    "citations": [
+      "[agentbench_2023] Xiao Liu, Hao Yu et al. (2023). AgentBench: Evaluating LLMs as Agents.",
+      "[agentsurvey_2023] Lei Wang, Chen Ma et al. (2023). A Survey on Large Language Model based Autonomous Agents.",
+      "[art_2023] Bhargavi Paranjape, et al. et al. (2023). ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models.",
+      "[agenttuning_2023] Aohan Zeng, et al. et al. (2023). AgentTuning: Enabling Generalized Agent Abilities for LLMs.",
+      "[rap_2023] Shibo Hao, et al. et al. (2023). Reasoning with Language Model is Planning with World Model (RAP)."
+    ]
+  },
+  "metadata": {
+    "query": "What evaluation methods exist for LLM reasoning agents?",
+    "stages": {
+      "query_analysis": {
+        "original_query": "What evaluation methods exist for LLM reasoning agents?",
+        "intents": [
+          {
+            "intent": "Identify evaluation methods for reasoning agents",
+            "domain": "reasoning agents",
+            "comparison_axis": "methods"
+          },
+          {
+            "intent": "Explore benchmarks for evaluating reasoning agents",
+            "domain": "reasoning agents",
+            "comparison_axis": "benchmarks"
+          }
+        ],
+        "reformulated_queries": [
+          "evaluation methods for LLM reasoning agents",
+          "benchmarks for evaluating reasoning agents",
+          "evaluation frameworks for reasoning in LLMs",
+          "methods to assess reasoning capabilities in language models"
+        ]
+      },
+      "retrieval": {
+        "n_candidates": 10,
+        "react_steps": 1,
+        "react_log": [
+          {
+            "thought": "Retrieved 10 relevant papers \u2265 minimum (3). Sufficient.",
+            "action": "STOP",
+            "observation": "Retrieved 10 unique papers (threshold L2<400.0) using query: 'What evaluation methods exist for LLM reasoning agents?'",
+            "iteration": 1
+          }
+        ]
+      },
+      "ranking": {
+        "selected": [
+          "agentbench_2023",
+          "agentsurvey_2023",
+          "art_2023",
+          "agenttuning_2023",
+          "rap_2023"
+        ]
+      },
+      "extraction": {
+        "compliance": {
+          "total": 5,
+          "compliant": 4,
+          "compliance_rate": 0.8,
+          "non_compliant_ids": [
+            "agentsurvey_2023"
+          ]
+        }
+      },
+      "comparison": {
+        "n_overlaps": 3,
+        "n_differences": 5,
+        "n_gaps": 4
+      }
+    },
+    "elapsed_seconds": 23.06
+  }
+}

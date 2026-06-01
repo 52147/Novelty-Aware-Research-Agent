@@ -1,21 +1,21 @@
 id,problem,missing_method,label,notes
-1,Reasoning-action interaction,Simulation-based multi-agent coordination,indirect,Connection is possible but not directly supported by the current retrieved matrix.
-2,Agent reasoning,Memory + reflection + planning,plausible,Memory and planning are directly relevant to agent reasoning but absent in this cell.
-3,Agent evaluation,Multi-agent collaboration framework,plausible,Evaluating multi-agent collaboration is a reasonable missing problem-method combination.
-4,Agent survey / taxonomy,Decoupled reasoning from observation,too_broad,Applying ReWOO-style decoupling to survey or taxonomy is not a clean methodological gap.
-5,Agent self-improvement,Simulation-based multi-agent coordination,indirect,Simulation may support self-improvement indirectly but the link is not direct.
-6,Agent self-improvement,Reasoning prompting,plausible,Reasoning prompting can plausibly support self-improvement but is absent in this matrix cell.
-7,Agent reasoning,Role-based multi-agent framework,plausible,Role-based frameworks can be applied to reasoning tasks and this absence is meaningful.
-8,Agent reasoning,Decoupled reasoning from observation,plausible,Decoupling reasoning from observation is directly relevant to agent reasoning.
-9,Reasoning-action efficiency,Role-playing / inception prompting,indirect,Role-playing may affect coordination but is not mainly an efficiency method.
-10,Agent reasoning,Benchmarking,plausible,Benchmarking agent reasoning is a meaningful missing combination.
-11,Human behavior simulation,Verbal reflection,plausible,Verbal reflection could plausibly enrich simulated human-like behavior.
-12,Agent evaluation,ReAct reasoning-action loop,plausible,Evaluating ReAct-style reasoning-action behavior is a meaningful missing combination.
-13,Reasoning-action interaction,Verbal reflection,plausible,Verbal reflection can plausibly affect reasoning-action interaction.
-14,Reasoning-action interaction,Conversational multi-agent framework,plausible,Conversational multi-agent frameworks can directly involve reasoning-action interaction.
-15,Agent self-improvement,ReAct reasoning-action loop,plausible,ReAct loops can plausibly support iterative agent self-improvement.
-16,Agent self-improvement,Role-based multi-agent framework,indirect,Role-based frameworks may support improvement indirectly but are not primarily self-improvement methods.
-17,Reasoning-action efficiency,Memory + reflection + planning,plausible,Memory and planning are directly relevant to efficient reasoning-action behavior.
-18,Reasoning-action efficiency,Survey and taxonomy,too_broad,Survey and taxonomy are not direct methods for improving reasoning-action efficiency.
-19,Agent self-improvement,Memory + reflection + planning,plausible,Memory/reflection/planning are directly relevant to self-improvement.
-20,Human behavior simulation,Survey and taxonomy,too_broad,Survey and taxonomy can organize the area but do not directly instantiate human behavior simulation.
+1,Human behavior simulation,ReAct reasoning-action loop,plausible,
+2,Agent evaluation,Survey and taxonomy,too_broad,
+3,Agent evaluation,Decoupled reasoning from observation,indirect,
+4,Multi-agent coordination,Memory + reflection + planning,plausible,
+5,Agent reasoning,Verbal reflection,plausible,
+6,Agent reasoning,Role-playing / inception prompting,plausible,
+7,Agent reasoning,ReAct reasoning-action loop,plausible,
+8,Agent evaluation,Verbal reflection,indirect,
+9,Reasoning-action interaction,Reasoning prompting,plausible,
+10,Agent evaluation,Role-playing / inception prompting,too_broad,
+11,Human behavior simulation,Survey and taxonomy,too_broad,
+12,Multi-agent coordination,Verbal reflection,plausible,
+13,Agent survey / taxonomy,Role-playing / inception prompting,meaningless,
+14,Agent evaluation,Reasoning prompting,indirect,
+15,Human behavior simulation,Conversational multi-agent framework,plausible,
+16,Agent survey / taxonomy,Benchmarking,plausible,
+17,Agent evaluation,Memory + reflection + planning,plausible,
+18,Reasoning-action interaction,Role-playing / inception prompting,indirect,
+19,Multi-agent coordination,Decoupled reasoning from observation,plausible,
+20,Agent reasoning,Multi-agent collaboration framework,plausible,

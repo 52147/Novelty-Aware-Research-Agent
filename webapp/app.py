@@ -24,7 +24,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 # ── Add project root to path so pipeline modules are importable ───────────────
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
 
 # ── App setup ─────────────────────────────────────────────────────────────────
 app = FastAPI(title="Novelty-Aware Research Agent", version="1.0.0")
@@ -41,7 +42,7 @@ static_dir = os.path.join(os.path.dirname(__file__), "static")
 if os.path.exists(static_dir):
     app.mount("/static", StaticFiles(directory=static_dir), name="static")
 
-CORPUS_PATH = os.environ.get("CORPUS_PATH", "corpus")
+CORPUS_PATH = os.environ.get("CORPUS_PATH", "results")
 RESULTS_DIR = os.environ.get("RESULTS_DIR", "results")
 os.makedirs(RESULTS_DIR, exist_ok=True)
 

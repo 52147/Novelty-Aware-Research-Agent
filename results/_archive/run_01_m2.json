@@ -1,0 +1,199 @@
+{
+  "report": {
+    "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+    "papers_analyzed": 5,
+    "per_paper_summaries": [
+      {
+        "paper_id": "agentverse_2023",
+        "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
+        "year": 2023,
+        "one_sentence_summary": "AgentVerse introduces a framework for multi-agent collaboration that enhances reasoning and coding tasks by surfacing emergent behaviors relevant to system design."
+      },
+      {
+        "paper_id": "autogen_2023",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "year": 2023,
+        "one_sentence_summary": "AutoGen showcases a multi-agent conversation paradigm that outperforms single-agent baselines in various benchmarks, offering a scalable approach to LLM applications."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents",
+        "year": 2023,
+        "one_sentence_summary": "This survey provides a unified framework for understanding LLM-based autonomous agents and identifies key open challenges in the field."
+      },
+      {
+        "paper_id": "openagents_2023",
+        "title": "OpenAgents: An Open Platform for Language Agents in the Wild",
+        "year": 2023,
+        "one_sentence_summary": "OpenAgents delivers a comprehensive platform for deploying language agents in real-world scenarios, addressing the gap in production deployment infrastructure."
+      },
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "year": 2023,
+        "one_sentence_summary": "AgentBench offers a standardized evaluation for LLMs as autonomous agents, highlighting performance gaps and challenges in long-horizon tasks."
+      }
+    ],
+    "overlaps": [
+      {
+        "paper_ids": [
+          "agentverse_2023",
+          "autogen_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers address the limitations of single-agent systems and propose multi-agent collaboration as a solution to enhance task execution and reasoning capabilities."
+      },
+      {
+        "paper_ids": [
+          "agentverse_2023",
+          "autogen_2023"
+        ],
+        "shared_element": "method",
+        "description": "Both papers propose frameworks for multi-agent collaboration, with AgentVerse focusing on structured collaboration and AutoGen on structured conversation among agents."
+      },
+      {
+        "paper_ids": [
+          "agentsurvey_2023",
+          "agentbench_2023"
+        ],
+        "shared_element": "problem",
+        "description": "Both papers identify the lack of standardized frameworks or evaluations for LLM-based autonomous agents, focusing on multi-agent coordination and evaluation methodologies."
+      }
+    ],
+    "differences": [
+      {
+        "paper_id": "agentverse_2023",
+        "title": "AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors",
+        "differentiating_aspect": "Emergent behaviors in multi-agent collaboration",
+        "description": "AgentVerse is distinct in its focus on surfacing emergent cooperative and competitive behaviors among agents, which is crucial for multi-agent system design."
+      },
+      {
+        "paper_id": "autogen_2023",
+        "title": "AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation",
+        "differentiating_aspect": "Multi-agent conversation paradigm",
+        "description": "AutoGen introduces a novel approach by using structured multi-agent conversations as a scalable paradigm for LLM applications, demonstrating its effectiveness over single-agent systems."
+      },
+      {
+        "paper_id": "agentsurvey_2023",
+        "title": "A Survey on Large Language Model based Autonomous Agents",
+        "differentiating_aspect": "Unified framework for LLM-based agents",
+        "description": "This survey is unique in providing a unified conceptual framework for understanding LLM-based autonomous agents, addressing a gap in the literature."
+      },
+      {
+        "paper_id": "openagents_2023",
+        "title": "OpenAgents: An Open Platform for Language Agents in the Wild",
+        "differentiating_aspect": "Production deployment infrastructure",
+        "description": "OpenAgents stands out by offering a full-stack platform for deploying LLM agents in real-world tasks, addressing the lack of production deployment infrastructure in most research."
+      },
+      {
+        "paper_id": "agentbench_2023",
+        "title": "AgentBench: Evaluating LLMs as Agents",
+        "differentiating_aspect": "Standardized evaluation for integrated agent behavior",
+        "description": "AgentBench is distinct for providing a comprehensive benchmark that evaluates LLMs as autonomous agents across multiple environments, focusing on integrated agent behavior rather than isolated capabilities."
+      }
+    ],
+    "gaps": [
+      {
+        "problem_formulation": "Coordinating multiple agents toward a shared goal requires structured collaboration.",
+        "missing_method": "Open platform with specialized agents for real-world deployment",
+        "description": "While the problem of coordinating multiple agents toward a shared goal is addressed using a dynamic recruitment and decision-making framework, there is no evidence of using an open platform with specialized agents for real-world deployment to tackle this problem.",
+        "supporting_evidence": "AgentVerse uses a framework for coordination, whereas OpenAgents provides an open platform for deployment, but these are not combined."
+      },
+      {
+        "problem_formulation": "Single-agent systems face fundamental limitations in complex reasoning and multi-step task execution.",
+        "missing_method": "Comprehensive benchmark evaluation",
+        "description": "The problem of single-agent systems' limitations is addressed through multi-agent conversation frameworks, but there is no evidence of using a comprehensive benchmark evaluation to assess improvements in complex reasoning and task execution.",
+        "supporting_evidence": "AutoGen uses multi-agent conversation, while AgentBench provides benchmark evaluation, but these approaches are not combined."
+      },
+      {
+        "problem_formulation": "The lack of a unified conceptual framework for LLM-based autonomous agents and the identification of open challenges.",
+        "missing_method": "Dynamic recruitment and decision-making framework",
+        "description": "The survey identifies the lack of a unified framework and open challenges but does not employ a dynamic recruitment and decision-making framework to address these challenges.",
+        "supporting_evidence": "AgentVerse uses a dynamic recruitment framework, but the survey does not apply such a method to address the identified challenges."
+      },
+      {
+        "problem_formulation": "Most LLM agent research evaluates on benchmarks without production deployment infrastructure.",
+        "missing_method": "Collaborative decision-making and action execution",
+        "description": "The problem of lacking production deployment infrastructure is addressed by OpenAgents, but there is no evidence of using collaborative decision-making and action execution to enhance deployment.",
+        "supporting_evidence": "OpenAgents provides deployment infrastructure, whereas AgentVerse uses collaborative decision-making, but these are not combined."
+      },
+      {
+        "problem_formulation": "The lack of standardized evaluation for LLM-based agents, which currently focus on isolated capabilities rather than integrated agent behavior.",
+        "missing_method": "Multi-agent conversation framework",
+        "description": "The problem of lacking standardized evaluation is addressed by AgentBench, but there is no evidence of using a multi-agent conversation framework to evaluate integrated agent behavior.",
+        "supporting_evidence": "AgentBench provides evaluation benchmarks, while AutoGen uses multi-agent conversation, but these are not combined."
+      }
+    ],
+    "synthesis": "The papers collectively highlight the importance of multi-agent frameworks in enhancing the capabilities of large language models (LLMs) for collaborative reasoning tasks. AgentVerse and AutoGen both address the limitations of single-agent systems by proposing structured collaboration and conversation paradigms, respectively, that improve task execution. Meanwhile, AgentBench and OpenAgents focus on standardized evaluations and real-world deployment infrastructure, addressing the need for comprehensive benchmarks and production-ready platforms. The survey by Wang et al. rounds out the corpus by providing a unified conceptual framework for LLM-based agents, although gaps remain concerning dynamic recruitment and decision-making strategies. The primary gaps identified include the need for integrating open platforms with specialized agents for deployment and leveraging comprehensive benchmarks to evaluate complex reasoning improvements.",
+    "citations": [
+      "[agentverse_2023] Weize Chen, Yusheng Su et al. (2023). AgentVerse: Facilitating Multi-Agent Collaboration and Exploring Emergent Behaviors.",
+      "[autogen_2023] Qingyun Wu, Gagan Bansal et al. (2023). AutoGen: Enabling Next-Gen LLM Applications via Multi-Agent Conversation.",
+      "[agentsurvey_2023] Lei Wang, Chen Ma et al. (2023). A Survey on Large Language Model based Autonomous Agents.",
+      "[openagents_2023] Tianbao Xie, Fan Zhou et al. (2023). OpenAgents: An Open Platform for Language Agents in the Wild.",
+      "[agentbench_2023] Xiao Liu, Hao Yu et al. (2023). AgentBench: Evaluating LLMs as Agents."
+    ]
+  },
+  "metadata": {
+    "query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+    "stages": {
+      "query_analysis": {
+        "original_query": "Compare multi-agent LLM frameworks for collaborative reasoning",
+        "intents": [
+          {
+            "intent": "Compare frameworks",
+            "domain": "multi-agent LLMs",
+            "comparison_axis": "methods"
+          },
+          {
+            "intent": "Evaluate collaborative reasoning",
+            "domain": "multi-agent LLMs",
+            "comparison_axis": "results"
+          }
+        ],
+        "reformulated_queries": [
+          "multi-agent LLM frameworks collaborative reasoning methods",
+          "comparison of multi-agent LLM frameworks for collaborative reasoning",
+          "collaborative reasoning results in multi-agent LLM frameworks",
+          "evaluation of collaborative reasoning in multi-agent LLM systems"
+        ]
+      },
+      "retrieval": {
+        "n_candidates": 9,
+        "react_steps": 1,
+        "react_log": [
+          {
+            "thought": "Retrieved 9 relevant papers \u2265 minimum (3). Sufficient.",
+            "action": "STOP",
+            "observation": "Retrieved 9 unique papers (threshold L2<400.0) using query: 'Compare multi-agent LLM frameworks for collaborative reasoning'",
+            "iteration": 1
+          }
+        ]
+      },
+      "ranking": {
+        "selected": [
+          "agentverse_2023",
+          "autogen_2023",
+          "agentsurvey_2023",
+          "openagents_2023",
+          "agentbench_2023"
+        ]
+      },
+      "extraction": {
+        "compliance": {
+          "total": 5,
+          "compliant": 4,
+          "compliance_rate": 0.8,
+          "non_compliant_ids": [
+            "agentsurvey_2023"
+          ]
+        }
+      },
+      "comparison": {
+        "n_overlaps": 3,
+        "n_differences": 5,
+        "n_gaps": 5
+      }
+    },
+    "elapsed_seconds": 28.49
+  }
+}

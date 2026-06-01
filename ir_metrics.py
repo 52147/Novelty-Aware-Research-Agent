@@ -38,7 +38,6 @@ import json
 import glob
 import math
 
-from compare_retrievers import avg
 
 RESULTS_DIR = os.environ.get("RESULTS_DIR", "results")
 CORPUS_FILE = "sample_papers.json"

@@ -3,32 +3,32 @@
     {
       "run": "run_01.json",
       "query": "Compare multi-agent LLM frameworks for col",
-      "precision_at_5": 0.0,
-      "ndcg_at_5": null,
-      "recall_at_5": null,
-      "mrr": 0.0
+      "precision_at_5": 1.0,
+      "ndcg_at_5": 0.7193683030220265,
+      "recall_at_5": 0.45454545454545453,
+      "mrr": 1.0
     },
     {
       "run": "run_02.json",
       "query": "What evaluation methods exist for LLM reas",
-      "precision_at_5": 0.0,
-      "ndcg_at_5": null,
-      "recall_at_5": null,
-      "mrr": 0.0
+      "precision_at_5": 1.0,
+      "ndcg_at_5": 0.5878439734558936,
+      "recall_at_5": 0.5,
+      "mrr": 1.0
     },
     {
       "run": "run_03.json",
       "query": "Compare verbal reinforcement and role-play",
-      "precision_at_5": 0.0,
-      "ndcg_at_5": null,
-      "recall_at_5": null,
-      "mrr": 0.0
+      "precision_at_5": 1.0,
+      "ndcg_at_5": 0.9496583536340616,
+      "recall_at_5": 0.625,
+      "mrr": 1.0
     }
   ],
   "mean": {
-    "precision_at_5": 0.0,
-    "ndcg_at_5": null,
-    "recall_at_5": null,
-    "mrr": 0.0
+    "precision_at_5": 1.0,
+    "ndcg_at_5": 0.7522902100373271,
+    "recall_at_5": 0.5265151515151515,
+    "mrr": 1.0
   }
 }

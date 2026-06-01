@@ -7,31 +7,31 @@
         "paper_id": "agentbench_2023",
         "title": "AgentBench: Evaluating LLMs as Agents",
         "year": 2023,
-        "one_sentence_summary": "AgentBench introduces a benchmark to evaluate large language models as autonomous agents, highlighting performance disparities between commercial and open-source models."
+        "one_sentence_summary": "AgentBench provides a benchmark for evaluating LLMs as autonomous agents, highlighting performance gaps and challenges in long-horizon tasks."
       },
       {
         "paper_id": "agentsurvey_2023",
         "title": "A Survey on Large Language Model based Autonomous Agents",
         "year": 2023,
-        "one_sentence_summary": "This survey provides a framework for understanding LLM-based autonomous agents and discusses existing challenges in the field."
+        "one_sentence_summary": "This survey offers a unified framework for LLM-based autonomous agent research, identifying key challenges in the field."
+      },
+      {
+        "paper_id": "art_2023",
+        "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+        "year": 2023,
+        "one_sentence_summary": "ART introduces a method for automating multi-step reasoning and tool-use in frozen language models, promoting generalization across tasks."
       },
       {
         "paper_id": "cot_2022",
         "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
         "year": 2022,
-        "one_sentence_summary": "Chain-of-thought prompting improves reasoning performance in large language models by encouraging detailed, step-by-step processing."
+        "one_sentence_summary": "Chain-of-thought prompting enhances LLM reasoning by enabling step-by-step decomposition, significantly improving performance on reasoning benchmarks."
       },
       {
-        "paper_id": "react_2022",
-        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
-        "year": 2022,
-        "one_sentence_summary": "ReAct integrates reasoning and acting in language models, enhancing performance in interactive tasks by dynamically updating context and reducing errors."
-      },
-      {
-        "paper_id": "rewoo_2023",
-        "title": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
+        "paper_id": "rap_2023",
+        "title": "Reasoning with Language Model is Planning with World Model (RAP)",
         "year": 2023,
-        "one_sentence_summary": "ReWOO improves efficiency in language models by decoupling reasoning from observations, leading to fewer token usages while maintaining accuracy."
+        "one_sentence_summary": "RAP demonstrates that using language models as world models with Monte Carlo tree search can improve multi-step reasoning."
       }
     ],
     "overlaps": [
@@ -45,19 +45,20 @@
       },
       {
         "paper_ids": [
+          "art_2023",
           "cot_2022",
-          "react_2022"
+          "rap_2023"
         ],
-        "shared_element": "method family",
-        "description": "Both papers involve methods that enhance reasoning in language models through structured prompting techniques: Chain-of-Thought and ReAct."
+        "shared_element": "problem",
+        "description": "All three papers address the challenge of improving multi-step reasoning in large language models."
       },
       {
         "paper_ids": [
-          "react_2022",
-          "rewoo_2023"
+          "art_2023",
+          "rap_2023"
         ],
         "shared_element": "method family",
-        "description": "Both papers propose methods that integrate reasoning and acting in language models, with ReAct interleaving reasoning and actions, and ReWOO decoupling them for efficiency."
+        "description": "Both papers propose methods for enhancing multi-step reasoning in LLMs, with ART focusing on tool use and RAP on planning with a world model."
       }
     ],
     "differences": [
@@ -65,66 +66,66 @@
         "paper_id": "agentbench_2023",
         "title": "AgentBench: Evaluating LLMs as Agents",
         "differentiating_aspect": "Scope and Evaluation Approach",
-        "description": "AgentBench provides a comprehensive benchmark specifically designed to evaluate LLMs as autonomous agents across multiple environments, focusing on integrated agent behavior rather than isolated capabilities."
+        "description": "AgentBench introduces a comprehensive benchmark specifically designed to evaluate LLMs as autonomous agents across multiple environments, focusing on integrated agent behavior rather than isolated capabilities."
       },
       {
         "paper_id": "agentsurvey_2023",
         "title": "A Survey on Large Language Model based Autonomous Agents",
         "differentiating_aspect": "Scope and Contribution",
-        "description": "This survey offers a unified conceptual framework for LLM-based autonomous agents and identifies key open challenges, filling a gap in the literature by providing a structured overview of the field."
+        "description": "This paper provides a unified conceptual framework for LLM-based autonomous agents and identifies open challenges, offering a broad overview of the field rather than focusing on a specific technical solution."
+      },
+      {
+        "paper_id": "art_2023",
+        "title": "ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models",
+        "differentiating_aspect": "Method and Novelty",
+        "description": "ART proposes a novel method for enabling frozen LLMs to perform multi-step reasoning and use external tools without hand-crafted prompts, emphasizing automation and generalization across tasks."
       },
       {
         "paper_id": "cot_2022",
         "title": "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models",
-        "differentiating_aspect": "Method and Claimed Contribution",
-        "description": "The paper introduces chain-of-thought prompting, a novel method that significantly enhances reasoning capabilities in large language models by encouraging step-by-step reasoning, effective particularly in models with over 100B parameters."
+        "differentiating_aspect": "Method and Contribution",
+        "description": "This paper introduces chain-of-thought prompting, a technique that significantly enhances reasoning performance by encouraging step-by-step decomposition, which becomes effective above a certain model scale."
       },
       {
-        "paper_id": "react_2022",
-        "title": "ReAct: Synergizing Reasoning and Acting in Language Models",
+        "paper_id": "rap_2023",
+        "title": "Reasoning with Language Model is Planning with World Model (RAP)",
         "differentiating_aspect": "Method and Novelty",
-        "description": "ReAct uniquely combines reasoning and acting within language models, allowing for dynamic context updating and self-correction, which reduces hallucinations and improves performance on interactive tasks."
-      },
-      {
-        "paper_id": "rewoo_2023",
-        "title": "ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models",
-        "differentiating_aspect": "Method and Efficiency",
-        "description": "ReWOO introduces a method that decouples reasoning from observations, reducing token usage and improving efficiency by generating a complete plan of tool calls upfront, contrasting with interleaved approaches like ReAct."
+        "description": "RAP treats the language model as a world model for planning, using Monte Carlo tree search to improve multi-step reasoning, highlighting a novel integration of planning and reasoning."
       }
     ],
     "gaps": [
       {
         "problem_formulation": "The rapid development of LLM-based agents lacks standardized evaluation, and existing benchmarks focus on isolated capabilities rather than integrated agent behavior.",
         "missing_method": "Chain-of-thought prompting",
-        "description": "While the problem focuses on the lack of standardized evaluation for LLM-based agents, chain-of-thought prompting could be explored as a method to enhance the evaluation process by incorporating reasoning steps into the assessment of agent behavior.",
-        "supporting_evidence": "AgentBench uses a comprehensive benchmark for evaluation, but does not incorporate chain-of-thought prompting as a method for enhancing evaluation."
-      },
-      {
-        "problem_formulation": "Large language models often fail at multi-step reasoning tasks.",
-        "missing_method": "ReWOO (Decoupling Reasoning from Observations)",
-        "description": "ReWOO could be applied to address multi-step reasoning failures by decoupling reasoning from observations, potentially improving efficiency and accuracy in reasoning tasks.",
-        "supporting_evidence": "Chain-of-thought prompting is used to address multi-step reasoning failures, but ReWOO's method of decoupling reasoning from observations is not applied to this problem."
-      },
-      {
-        "problem_formulation": "Existing approaches separate reasoning and acting in language models.",
-        "missing_method": "AgentBench",
-        "description": "AgentBench could be used to evaluate the integration of reasoning and acting in language models, providing a standardized benchmark to assess improvements in this area.",
-        "supporting_evidence": "ReAct addresses the separation of reasoning and acting, but does not utilize AgentBench as a method for evaluation."
+        "description": "While the problem of lacking standardized evaluation for LLM-based agents is addressed by AgentBench, the method of chain-of-thought prompting, which has been shown to improve reasoning in LLMs, is not applied to this problem. This could potentially enhance the evaluation by incorporating reasoning capabilities into agent behavior assessment.",
+        "supporting_evidence": "AgentBench focuses on comprehensive benchmarking but does not mention using chain-of-thought prompting, which is highlighted in the cot_2022 paper as a method to improve reasoning."
       },
       {
         "problem_formulation": "The lack of a unified conceptual framework for LLM-based autonomous agents and the identification of open challenges in long-term planning, multi-agent coordination, safety, and evaluation methodology.",
+        "missing_method": "Monte Carlo tree search",
+        "description": "The survey identifies open challenges in long-term planning and evaluation methodology but does not employ Monte Carlo tree search, a method used in RAP to enhance planning capabilities in LLMs. This method could provide insights into addressing these challenges.",
+        "supporting_evidence": "The agentsurvey_2023 paper outlines challenges but does not specify methods like Monte Carlo tree search, which is used in RAP to improve planning."
+      },
+      {
+        "problem_formulation": "Large language models often fail at multi-step reasoning tasks.",
         "missing_method": "AgentBench",
-        "description": "AgentBench could be used to provide empirical evaluation data that supports the conceptual framework and identifies challenges in LLM-based autonomous agents.",
-        "supporting_evidence": "The survey identifies challenges but does not employ AgentBench to empirically evaluate these aspects."
+        "description": "While chain-of-thought prompting addresses multi-step reasoning failures, the use of a comprehensive benchmark like AgentBench could provide a more integrated evaluation of multi-step reasoning capabilities in realistic environments.",
+        "supporting_evidence": "cot_2022 focuses on reasoning improvements but does not mention using a benchmark like AgentBench, which evaluates integrated agent behavior."
+      },
+      {
+        "problem_formulation": "Improving multi-step reasoning by using language models as world models for planning.",
+        "missing_method": "Automatic reasoning and tool-use",
+        "description": "RAP uses language models as world models for planning but does not incorporate automatic reasoning and tool-use methods, which could enhance the model's ability to handle complex multi-step tasks.",
+        "supporting_evidence": "RAP employs Monte Carlo tree search but does not mention the automatic reasoning and tool-use approach from art_2023, which could complement its planning strategy."
       }
     ],
-    "synthesis": "The analyzed papers collectively explore a variety of evaluation methods and approaches to enhance the reasoning capabilities of large language models (LLMs) as autonomous agents. AgentBench and the survey by Wang et al. both address the need for standardized evaluation frameworks, with AgentBench offering a specific benchmark for integrated agent behavior evaluation. Meanwhile, methods like Chain-of-Thought prompting and the ReAct framework focus on improving reasoning through structured prompting and integrating reasoning with acting, respectively. ReWOO further advances efficiency by decoupling reasoning from observation, contrasting with the interleaved approach seen in ReAct. However, there remains a gap in applying these advancements to standardized evaluations, highlighting an opportunity for future research to incorporate these methods into robust evaluation frameworks for LLM reasoning agents.",
+    "synthesis": "The analyzed papers collectively highlight the need for rigorous evaluation methods for LLM reasoning agents, emphasizing the challenges in multi-step reasoning and agent task performance. AgentBench and the survey by Wang et al. both address the lack of standardized evaluation, with AgentBench providing a specific benchmark and the survey offering a broad framework for understanding LLM-based agents. Papers like ART and RAP propose innovative methods to enhance reasoning, focusing on tool-use automation and planning with world models, respectively. Meanwhile, chain-of-thought prompting emerges as a crucial technique for improving reasoning capabilities. However, gaps remain in integrating these methods with comprehensive benchmarks and frameworks, which could improve evaluation and planning capabilities in LLM agents.",
     "citations": [
       "agentbench_2023 Xiao Liu, Hao Yu et al. (2023). AgentBench: Evaluating LLMs as Agents.",
       "agentsurvey_2023 Lei Wang, Chen Ma et al. (2023). A Survey on Large Language Model based Autonomous Agents.",
+      "art_2023 Bhargavi Paranjape, et al. (2023). ART: Automatic Multi-Step Reasoning and Tool-Use for Large Language Models.",
       "cot_2022 Jason Wei, Xuezhi Wang et al. (2022). Chain-of-Thought Prompting Elicits Reasoning in Large Language Models.",
-      "react_2022 Shunyu Yao, Jeffrey Zhao et al. (2022). ReAct: Synergizing Reasoning and Acting in Language Models.",
-      "rewoo_2023 Binfeng Xu, Zhiyuan Peng et al. (2023). ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models."
+      "rap_2023 Shibo Hao, et al. (2023). Reasoning with Language Model is Planning with World Model (RAP)."
     ]
   },
   "metadata": {
@@ -134,31 +135,31 @@
         "original_query": "What evaluation methods exist for LLM reasoning agents?",
         "intents": [
           {
-            "intent": "evaluation methods for reasoning agents",
+            "intent": "Identify evaluation methods for LLM reasoning agents",
             "domain": "LLM reasoning agents",
             "comparison_axis": "methods"
           },
           {
-            "intent": "benchmarks for reasoning capabilities",
+            "intent": "Explore benchmarks for assessing LLM reasoning agents",
             "domain": "LLM reasoning agents",
             "comparison_axis": "benchmarks"
           }
         ],
         "reformulated_queries": [
           "evaluation methods for large language model reasoning agents",
-          "benchmarks for evaluating reasoning in LLM agents",
-          "methods to assess reasoning in LLM-based agents",
-          "evaluation techniques for reasoning capabilities of LLMs"
+          "benchmarks for assessing reasoning capabilities of LLMs",
+          "evaluation techniques for LLM-based reasoning systems",
+          "methods to evaluate reasoning in large language models"
         ]
       },
       "retrieval": {
-        "n_candidates": 9,
+        "n_candidates": 10,
         "react_steps": 1,
         "react_log": [
           {
-            "thought": "Retrieved 9 relevant papers \u2265 minimum (3). Sufficient.",
+            "thought": "Retrieved 10 relevant papers \u2265 minimum (3). Sufficient.",
             "action": "STOP",
-            "observation": "Retrieved 9 unique papers (threshold L2<400.0) using query: 'What evaluation methods exist for LLM reasoning agents?'",
+            "observation": "Retrieved 10 unique papers (threshold L2<400.0) using query: 'What evaluation methods exist for LLM reasoning agents?'",
             "iteration": 1
           }
         ]
@@ -167,9 +168,9 @@
         "selected": [
           "agentbench_2023",
           "agentsurvey_2023",
+          "art_2023",
           "cot_2022",
-          "react_2022",
-          "rewoo_2023"
+          "rap_2023"
         ]
       },
       "extraction": {
@@ -188,6 +189,6 @@
         "n_gaps": 4
       }
     },
-    "elapsed_seconds": 26.8
+    "elapsed_seconds": 23.47
   }
 }
