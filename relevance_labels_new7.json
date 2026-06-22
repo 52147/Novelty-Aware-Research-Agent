@@ -1,0 +1,113 @@
+{
+  "_instructions": "3=highly,2=relevant,1=marginal,0=not. Author-assigned.",
+  "queries": {
+    "R4": {
+      "query": "Compare tool-use and function-calling approaches in LLM agents",
+      "relevance": {
+        "toolformer_2023": 3,
+        "toolbench_2023": 3,
+        "mint_2023": 2,
+        "agentsurvey_2023": 1,
+        "agentbench_2023": 1,
+        "gorilla_2023": 3,
+        "restgpt_2023": 3,
+        "taskmatrix_2023": 3,
+        "chameleon_2023": 2,
+        "hugginggpt_2023": 2,
+        "react_2022": 2,
+        "critic_2023": 2
+      }
+    },
+    "R5": {
+      "query": "What memory mechanisms do LLM agents use for long-horizon tasks?",
+      "relevance": {
+        "reflexion_2023": 3,
+        "memgpt_2023": 3,
+        "swiftsage_2023": 2,
+        "agentsurvey_2023": 1,
+        "generativeagents_2023": 3,
+        "expel_2023": 3,
+        "voyager_2023": 3,
+        "gitm_2023": 2,
+        "knnlm_2020": 1,
+        "lostmiddle_2023": 1
+      }
+    },
+    "R6": {
+      "query": "Compare planning strategies in LLM-based autonomous agents",
+      "relevance": {
+        "deps_2023": 3,
+        "agentsurvey_2023": 1,
+        "rap_2023": 3,
+        "generativeagents_2023": 1,
+        "swiftsage_2023": 2,
+        "tot_2023": 3,
+        "lats_2023": 3,
+        "adapt_2023": 3,
+        "plansolve_2023": 2,
+        "leasttomost_2022": 2,
+        "saycan_2022": 3,
+        "voyager_2023": 2
+      }
+    },
+    "R7": {
+      "query": "How is retrieval-augmented generation evaluated for factuality?",
+      "relevance": {
+        "ragsurvey_2023": 3,
+        "chainofnote_2023": 2,
+        "selfrag_2023": 2,
+        "rarr_2023": 3,
+        "activerag_2023": 2,
+        "crag_2024": 2,
+        "cove_2023": 1,
+        "flare_2023": 2,
+        "recomp_2023": 1,
+        "beir_2021": 1
+      }
+    },
+    "R8": {
+      "query": "Compare single-agent and multi-agent problem-solving architectures",
+      "relevance": {
+        "agentverse_2023": 3,
+        "metagpt_2023": 3,
+        "autogen_2023": 3,
+        "agentsurvey_2023": 2,
+        "agentbench_2023": 1,
+        "camel_2023": 3,
+        "chatdev_2023": 3,
+        "multidebate_2023": 2,
+        "metaagents_2023": 3,
+        "roco_2023": 2
+      }
+    },
+    "R9": {
+      "query": "What methods reduce hallucination in retrieval-augmented systems?",
+      "relevance": {
+        "cove_2023": 2,
+        "selfrag_2023": 3,
+        "crag_2024": 3,
+        "ragsurvey_2023": 2,
+        "activerag_2023": 2,
+        "chainofnote_2023": 3,
+        "rarr_2023": 3,
+        "flare_2023": 2,
+        "critic_2023": 2,
+        "rest_2023": 1
+      }
+    },
+    "R10": {
+      "query": "Compare reflection and self-critique mechanisms in LLM agents",
+      "relevance": {
+        "selfrefine_2023": 3,
+        "reflexion_2023": 3,
+        "innermono_2022": 2,
+        "agenttuning_2023": 1,
+        "react_2022": 1,
+        "critic_2023": 3,
+        "expel_2023": 2,
+        "selfrag_2023": 2,
+        "rarr_2023": 2
+      }
+    }
+  }
+}
